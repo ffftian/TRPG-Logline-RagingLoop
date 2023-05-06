@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e8466f6e7282714b8e82af0959d9c9f, type: 3}
+  m_Name: StandSlotSetting
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: SlotSetting
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.String[],
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: 01
+    - Name: $v
+      Entry: 7
+      Data: 2|System.String[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 8
+    - Name: 
+      Entry: 1
+      Data: "0\u6807\u51C6"
+    - Name: 
+      Entry: 1
+      Data: "1\u95ED\u773C"
+    - Name: 
+      Entry: 1
+      Data: "2\u5047\u7B11"
+    - Name: 
+      Entry: 1
+      Data: "3\u795E\uFF0C\u5230\u5E95\u662F\u4EC0\u4E48\uFF1F"
+    - Name: 
+      Entry: 1
+      Data: "4\u7F54\u987E\u5DE6\u53F3"
+    - Name: 
+      Entry: 1
+      Data: "5\u60CA\u8BB6"
+    - Name: 
+      Entry: 1
+      Data: "6\u56F0\u60D1"
+    - Name: 
+      Entry: 1
+      Data: "7\u56F0\u60D1\u770B\u5411"
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
