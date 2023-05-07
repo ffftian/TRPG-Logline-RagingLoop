@@ -249,6 +249,23 @@ MonoBehaviour:
     m_DisplayName: "\u623F\u77F3\u9633\u660E(1)(91)(91)"
   m_Markers:
     m_Objects: []
+--- !u!114 &-261625057067592700
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
+  m_Name: AudioPlayableAsset
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 8300000, guid: fcb53b05a060dc24f98ccab39b35eab7, type: 3}
+  m_Loop: 0
+  m_bufferingTime: 0.1
+  m_ClipProperties:
+    volume: 1
 --- !u!114 &-194165735079005304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -424,13 +441,13 @@ MonoBehaviour:
     m_Start: 0.08333333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 446955519977557414}
-    m_Duration: 2.3833333333333333
+    m_Duration: 2.112
     m_TimeScale: 1
     m_ParentTrack: {fileID: 477520463806798700}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: 0.03333333333333366
+    m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -490,15 +507,15 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 06543_01
   - m_Version: 1
-    m_Start: 2.433333333333333
-    m_ClipIn: 0
-    m_Asset: {fileID: 7047810799539164167}
-    m_Duration: 1.5658049886621315
+    m_Start: 2.25
+    m_ClipIn: 1.1833333333333331
+    m_Asset: {fileID: -261625057067592700}
+    m_Duration: 1.5899092970521544
     m_TimeScale: 1
     m_ParentTrack: {fileID: 477520463806798700}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0.03333333333333366
+    m_BlendInDuration: -1
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -557,7 +574,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: tmp_a4pw1g4
+    m_DisplayName: tmpu1zq3sk6
   m_Markers:
     m_Objects: []
   m_TrackProperties:
@@ -748,20 +765,3 @@ MonoBehaviour:
     m_DisplayName: StandSlotShowClip
   m_Markers:
     m_Objects: []
---- !u!114 &7047810799539164167
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
-  m_Name: AudioPlayableAsset
-  m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 086edff13a16ecd41babc939d72d782f, type: 3}
-  m_Loop: 0
-  m_bufferingTime: 0.1
-  m_ClipProperties:
-    volume: 1

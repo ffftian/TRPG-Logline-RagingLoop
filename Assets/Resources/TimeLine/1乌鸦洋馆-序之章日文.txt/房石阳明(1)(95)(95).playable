@@ -366,7 +366,7 @@ MonoBehaviour:
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: 0
+    m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -408,7 +408,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: tmp2diutfjd
   - m_Version: 1
-    m_Start: 1.433333333333333
+    m_Start: 1.5166666666666666
     m_ClipIn: 0
     m_Asset: {fileID: 5329468903891893529}
     m_Duration: 1.5193650793650795
@@ -416,7 +416,7 @@ MonoBehaviour:
     m_ParentTrack: {fileID: 779524467106512534}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0
+    m_BlendInDuration: -1
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2

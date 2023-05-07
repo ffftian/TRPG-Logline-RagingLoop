@@ -39,7 +39,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0.05
+    m_Start: 0.3333333333333333
     m_ClipIn: 0
     m_Asset: {fileID: -2934640303233153216}
     m_Duration: 2.6
@@ -48,7 +48,7 @@ MonoBehaviour:
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendOutDuration: 0
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -75,25 +75,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -108,7 +90,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: "\u82B9\u6CFD\u5343\u679D\u5B9E(4)(67)(67)"
   - m_Version: 1
-    m_Start: 2.65
+    m_Start: 2.9333333333333322
     m_ClipIn: 2.95
     m_Asset: {fileID: 4676794749013114301}
     m_Duration: 1.2628798185941044
@@ -116,7 +98,7 @@ MonoBehaviour:
     m_ParentTrack: {fileID: -2144580903380023591}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
+    m_BlendInDuration: 0
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -610,7 +592,7 @@ MonoBehaviour:
   template:
     position: {x: 0, y: 0, z: 0}
     overallIndex: 0
-    browIndex: 6
+    browIndex: 2
     eyeIndex: 0
     mouthIndex: 7
 --- !u!114 &4676794749013114301
