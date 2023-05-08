@@ -6,7 +6,6 @@ using UnityEngine.Playables;
 public class ShakeBehaviour : PlayableBehaviour
 {
     public Vector2 shakeRange;
-    public RectTransform component;
 
 
     //public override void ProcessFrame(Playable playable, FrameData info, object playerData)

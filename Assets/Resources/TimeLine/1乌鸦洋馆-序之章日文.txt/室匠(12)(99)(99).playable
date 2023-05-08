@@ -133,8 +133,8 @@ MonoBehaviour:
   - m_Version: 1
     m_Start: 0
     m_ClipIn: 0
-    m_Asset: {fileID: 4441498516279833145}
-    m_Duration: 1.3499999999999996
+    m_Asset: {fileID: 6795694404569595264}
+    m_Duration: 1.6833333333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: -5987025240165684317}
     m_EaseInDuration: 0
@@ -143,7 +143,25 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -162,9 +180,9 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: tmp8nnenqq_
+    m_DisplayName: tmpsa2i630u
   - m_Version: 1
-    m_Start: 1.3499999999999996
+    m_Start: 1.6833333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 7715481944543277310}
     m_Duration: 3.3189115646258505
@@ -173,7 +191,7 @@ MonoBehaviour:
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendOutDuration: 0
     m_MixInCurve:
       serializedVersion: 2
       m_Curve: []
@@ -197,7 +215,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: tmp41zo9c0w
   - m_Version: 1
-    m_Start: 4.66891156462585
+    m_Start: 5.002244897959182
     m_ClipIn: 4.35
     m_Asset: {fileID: -9056783009200865028}
     m_Duration: 4.066666666666667
@@ -205,7 +223,7 @@ MonoBehaviour:
     m_ParentTrack: {fileID: -5987025240165684317}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
+    m_BlendInDuration: 0
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -583,7 +601,7 @@ MonoBehaviour:
   template:
     dialogue: "\u201C\u5343\u679D\u5B9E\u90A3\u4E2B\u5934\uFF0C\u8FD8\u662F\u548C\u57CE\u91CC\u4EBA\u6BD4\u8F83\u5BB9\u6613\u76F8\u5904\u554A\u3002\u7B97\u4E86\uFF0C\u6211\u4E5F\u4E0D\u662F\u4E0D\u80FD\u7406\u89E3\u2026\u2026\u9999\u7EC7\u59D0\uFF0C\u518D\u6765\u4E00\u676F\u8336\uFF01\u201D\n"
     _speed: 20
---- !u!114 &4441498516279833145
+--- !u!114 &6795694404569595264
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -595,7 +613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 6a050d7cfd5d2394e9eec88b4f425b3e, type: 3}
+  m_Clip: {fileID: 8300000, guid: 229bb91d4a2afd749b1d7ba08f48fb50, type: 3}
   m_Loop: 0
   m_bufferingTime: 0.1
   m_ClipProperties:

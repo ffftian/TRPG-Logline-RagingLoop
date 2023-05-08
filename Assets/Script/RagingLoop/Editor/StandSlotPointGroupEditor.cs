@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,11 @@ namespace RagingLoop
             }
 
             pop = new PointGroupPop(component);
+        }
+        private void OnDisable()
+        {
+            //UnityEditor.EditorUtility.SetDirty(component);
+            AssetDatabase.SaveAssets();
         }
         public override void OnInspectorGUI()
         {

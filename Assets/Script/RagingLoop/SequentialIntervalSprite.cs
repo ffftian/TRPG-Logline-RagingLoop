@@ -19,8 +19,12 @@ public class SequentialIntervalSprite
         int[] TimingArray;
         System.Random r = new System.Random();
         TimingArray = new int[6] { 0, 4, 0, 4, 0, 4 };//4这块可能是变眼睛？
-        TimingArray[0] = 50 + r.Next(60);
-        TimingArray[2] = 50 + r.Next(60);
+        //TimingArray[0] = 50 + r.Next(60);
+        //TimingArray[2] = 50 + r.Next(60);
+        //TimingArray[4] = 10 + r.Next(3);
+
+        TimingArray[0] = 50 + 20 + r.Next(40);
+        TimingArray[2] = 50 + 20 + r.Next(40);
         TimingArray[4] = 10 + r.Next(3);
         return TimingArray;
     }
@@ -33,6 +37,20 @@ public class SequentialIntervalSprite
     }
     public void RefreshSprites(params Sprite[] sprites)
     {
+        if (this.sprites == null)
+        {
+            this.sprites = sprites;
+            return;
+        }
+        for (int i = 0; i < sprites.Length; i++)
+        {
+            if (this.sprites[i] != sprites[i])
+            {
+                BlinkEye();
+                delta = 0;
+                image.sprite = sprites[0];
+            }
+        }
         this.sprites = sprites;
     }
 

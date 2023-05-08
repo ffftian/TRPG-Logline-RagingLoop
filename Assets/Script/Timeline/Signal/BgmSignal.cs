@@ -47,7 +47,7 @@ public class BgmSignal : MonoBehaviour
         }
         audioSource.clip = bgm;
         audioSource.loop = true;
-        audioSource.volume = 0.2f;
+        audioSource.volume = 0.15f;
         audioSource.Play();
         if (canvasGroup != null)
         {

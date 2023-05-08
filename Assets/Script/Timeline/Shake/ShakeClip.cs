@@ -7,7 +7,7 @@ using UnityEngine.Timeline;
 public class ShakeClip : PlayableAsset, ITimelineClipAsset
 {
     public ShakeBehaviour template;
-    public ClipCaps clipCaps => ClipCaps.None;
+    public ClipCaps clipCaps => ClipCaps.Blending;
 
     public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)
     {

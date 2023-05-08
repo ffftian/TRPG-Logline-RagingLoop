@@ -201,6 +201,131 @@ MonoBehaviour:
     m_DisplayName: "\u623F\u77F3\u9633\u660E(1)(69)(69)"
   m_Markers:
     m_Objects: []
+--- !u!114 &-6292097701805769616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c8670426e6a5643a1c0af9e7c14209, type: 3}
+  m_Name: Shake Track
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 0.7
+    m_ClipIn: 0
+    m_Asset: {fileID: 6852618713060250813}
+    m_Duration: 1.4244671583175652
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -6292097701805769616}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: 0.09113382498423173
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: ShakeClip
+  - m_Version: 1
+    m_Start: 2.0333333333333337
+    m_ClipIn: 0
+    m_Asset: {fileID: -2940918041707820926}
+    m_Duration: 0.16666666666666652
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -6292097701805769616}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0.09113382498423173
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: ShakeClip
+  m_Markers:
+    m_Objects: []
 --- !u!114 &-5842385418708755936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -240,7 +365,7 @@ MonoBehaviour:
     m_Start: 0.65
     m_ClipIn: 0
     m_Asset: {fileID: 5777248648643390206}
-    m_Duration: 0.5
+    m_Duration: 1.5500000000000003
     m_TimeScale: 1
     m_ParentTrack: {fileID: -3993370854826207219}
     m_EaseInDuration: 0
@@ -307,6 +432,20 @@ MonoBehaviour:
     m_DisplayName: StandSlotShowClip
   m_Markers:
     m_Objects: []
+--- !u!114 &-2940918041707820926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57e5268fc47aa6042b92bec313cb4610, type: 3}
+  m_Name: ShakeClip
+  m_EditorClassIdentifier: 
+  template:
+    shakeRange: {x: 0, y: 0}
 --- !u!114 &-758623984626180675
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -332,7 +471,7 @@ MonoBehaviour:
     m_Start: 0.65
     m_ClipIn: 0
     m_Asset: {fileID: -5842385418708755936}
-    m_Duration: 0.5
+    m_Duration: 1.5500000000000003
     m_TimeScale: 1
     m_ParentTrack: {fileID: -758623984626180675}
     m_EaseInDuration: 0
@@ -418,6 +557,7 @@ MonoBehaviour:
   - {fileID: -6335039926771276709}
   - {fileID: 3750992979350035360}
   - {fileID: 3822572250606852696}
+  - {fileID: -6292097701805769616}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -691,6 +831,20 @@ MonoBehaviour:
     browIndex: 1
     eyeIndex: 5
     mouthIndex: 5
+--- !u!114 &6852618713060250813
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57e5268fc47aa6042b92bec313cb4610, type: 3}
+  m_Name: ShakeClip
+  m_EditorClassIdentifier: 
+  template:
+    shakeRange: {x: 5, y: 5}
 --- !u!114 &7049122634799682628
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -23,6 +23,7 @@ abstract public class LoglineComponent : MonoBehaviour
     {
 #if !UNITY_EDITOR
         serialPtr = 0;
+        SelectMessage(serialPtr);
 #endif
         SetNameText(CurrentRoleName);
         MessageRuning();

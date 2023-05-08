@@ -20,6 +20,11 @@ namespace RagingLoop
 
         public override int? messageAssetLength => messageAsset?.messageDataList.Count;
 
+        public override void Start()
+        {
+            base.Start();
+        }
+
         public override void SelectMessage(int Serial)
         {
             CommonTextData serialData = messageAsset.messageDataList[Serial];

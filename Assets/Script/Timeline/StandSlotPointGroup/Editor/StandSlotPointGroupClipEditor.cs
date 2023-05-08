@@ -43,7 +43,11 @@ public class StandSlotPointGroupClipEditor : Editor
         pop = new PointGroupPop(StandSlotPointGroup);
 
     }
-
+    private void OnDisable()
+    {
+        UnityEditor.EditorUtility.SetDirty(this.component);
+        AssetDatabase.SaveAssets();
+    }
 
 
     public override void OnInspectorGUI()
