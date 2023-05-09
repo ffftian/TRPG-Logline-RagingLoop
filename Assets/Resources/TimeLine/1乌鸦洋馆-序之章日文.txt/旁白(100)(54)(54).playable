@@ -503,7 +503,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Clear
+    m_DisplayName: Dialog
   - m_Version: 1
     m_Start: 8.466666666666999
     m_ClipIn: 0

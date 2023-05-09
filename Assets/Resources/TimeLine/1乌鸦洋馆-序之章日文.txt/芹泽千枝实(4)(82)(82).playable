@@ -367,7 +367,7 @@ MonoBehaviour:
     position: {x: 0, y: 0, z: 0}
     overallIndex: 0
     browIndex: 3
-    eyeIndex: 1
+    eyeIndex: 0
     mouthIndex: 0
 --- !u!114 &7240852200977453334
 MonoBehaviour:

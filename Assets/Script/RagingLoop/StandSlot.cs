@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,9 +43,25 @@ namespace RagingLoop
 
         public void TickEye(int eyeIndex)
         {
+            if(id == 2)
+            {
+                shutEye.RefreshSprites(casheEye[eyeIndex], casheEye[eyeIndex]);
+            }
+            else if(id == 10)
+            {
+                shutEye.RefreshSprites(casheEye[eyeIndex], casheEye[eyeIndex]);
+            }
+            else if (id == 5)
+            {
+                if (shutEye != null)
+                {
+                    shutEye.RefreshSprites(casheEye[eyeIndex], casheEye[3]);
+                }
+            }
+            else
             if (shutEye != null)
             {
-                if(eyeIndex==6 || eyeIndex == 2 || eyeIndex == 13)//半睁眼动作不用刷新
+                if(eyeIndex==6 || eyeIndex == 2 || eyeIndex == 3 || eyeIndex == 13)//半睁眼动作不用刷新
                 {
                     shutEye.RefreshSprites(casheEye[eyeIndex], casheEye[eyeIndex]);
                 }

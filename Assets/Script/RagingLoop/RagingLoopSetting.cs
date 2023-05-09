@@ -28,23 +28,23 @@ public static class RagingLoopSetting
     //static Dictionary<string, List<ImgBustAdv>> BustAdv = new Dictionary<string, List<ImgBustAdv>>();
     static RagingLoopSetting()
     {
-        NameToJPNameText.Add("房石阳明", "房石  陽明");
+        NameToJPNameText.Add("房石阳明", "房石　陽明");
         NameToJPNameText.Add("咩子", "めー子");
-        NameToJPNameText.Add("美佐峰美辻", "美佐峰     美辻");
-        NameToJPNameText.Add("芹泽千枝实", "芹沢     千枝実");
-        NameToJPNameText.Add("回末李花子", "回末     李花子");
-        NameToJPNameText.Add("卷岛春", "巻島     春");
-        NameToJPNameText.Add("织部泰长", "織部     泰長");
-        NameToJPNameText.Add("酿田近望", "醸田     近望");
-        NameToJPNameText.Add("织部义次", "織部     義次");
-        NameToJPNameText.Add("织部香织", "織部     かおり");
-        NameToJPNameText.Add("能里清之介", "能里     清之介");
-        NameToJPNameText.Add("室匠", "室     匠");
-        NameToJPNameText.Add("卷岛宽造", "巻島     寛造");
-        NameToJPNameText.Add("山胁多惠", "山脇     多恵");
+        NameToJPNameText.Add("美佐峰美辻", "美佐峰　美辻");
+        NameToJPNameText.Add("芹泽千枝实", "芹沢　千枝実");
+        NameToJPNameText.Add("回末李花子", "回末　李花子");
+        NameToJPNameText.Add("卷岛春", "巻島　春");
+        NameToJPNameText.Add("织部泰长", "織部　泰長");
+        NameToJPNameText.Add("酿田近望", "醸田　近望");
+        NameToJPNameText.Add("织部义次", "織部　義次");
+        NameToJPNameText.Add("织部香织", "織部　かおり");
+        NameToJPNameText.Add("能里清之介", "能里　清之介");
+        NameToJPNameText.Add("室匠", "室　匠");
+        NameToJPNameText.Add("卷岛宽造", "巻島　寛造");
+        NameToJPNameText.Add("山胁多惠", "山脇　多恵");
         NameToJPNameText.Add("狼老头", "狼老头");
-        NameToJPNameText.Add("马宫久子", "馬宮     久子");
-        NameToJPNameText.Add("桥本雄大", "橋本     雄大");
+        NameToJPNameText.Add("马宫久子", "馬宮　久子");
+        NameToJPNameText.Add("桥本雄大", "橋本　雄大");
     }
     public static void Init(Dictionary<string, ImgBustAdv> bustAdv)
     {

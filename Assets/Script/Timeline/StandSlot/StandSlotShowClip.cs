@@ -9,7 +9,8 @@ namespace RagingLoop
     {
         public override double duration => 0.5f;
         public StandSlotShowBehaviour template;
-        public ClipCaps clipCaps => ClipCaps.Extrapolation;//外推启用
+        public ClipCaps clipCaps => ClipCaps.None;
+        //public ClipCaps clipCaps => ClipCaps.Extrapolation;//外推启用
 
         public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)
         {
