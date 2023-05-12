@@ -486,7 +486,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 7724915426332499686}
-    m_Duration: 2.459773302078247
+    m_Duration: 2.85
     m_TimeScale: 1
     m_ParentTrack: {fileID: 7510374816472691984}
     m_EaseInDuration: 0
@@ -566,5 +566,5 @@ MonoBehaviour:
   m_Name: DialogueControlClip
   m_EditorClassIdentifier: 
   template:
-    dialogue: "\u201C\u90A3\u4F60\u4E3A\u4EC0\u4E48\u80CC\u53DB\u6211\uFF1F\uFF01\u201D\n"
+    dialogue: "\u300C\u90A3\u4F60\u4E3A\u4EC0\u4E48\u80CC\u53DB\u6211\uFF1F\uFF01\u300D\n"
     _speed: 20

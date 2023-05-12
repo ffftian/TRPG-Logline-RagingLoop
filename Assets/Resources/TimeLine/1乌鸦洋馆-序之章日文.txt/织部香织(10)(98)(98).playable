@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: DialogueControlClip
   m_EditorClassIdentifier: 
   template:
-    dialogue: "\u201C\u603B\u3001\u603B\u89C9\u5F97\u597D\u70ED\u95F9\u554A\u2026\u2026\u201D\n"
+    dialogue: "\u300C\u603B\u3001\u603B\u89C9\u5F97\u597D\u70ED\u95F9\u554A\u2026\u2026\u300D\n"
     _speed: 20
 --- !u!114 &-2513545844340307690
 MonoBehaviour:

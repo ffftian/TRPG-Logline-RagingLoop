@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Name: DialogueControlClip
   m_EditorClassIdentifier: 
   template:
-    dialogue: "\u518D\u52A0\u4E0A\u5F97\u77E5\u4E86\u5979\u2014\u2014\u82B9\u6CFD\u5343\u679D\u5B9E\u4E5F\u4FDD\u6709\u56DE\u6EAF\u7684\u8BB0\u5FC6\uFF0C\u5728\u4E00\u756A\u9A8C\u8BC1\u4E4B\u4E2D\uFF0C\u6211\u88AB\u66B4\u6012\u7684\u5343\u679D\u5B9E\u5404\u79CD\u6740\u5BB3\uFF0C\u60E8\u6B7B\uFF0C\u7ED3\u679C\u8FD8\u73A9\u4E86\u573A\u6B89\u60C5\uFF0C\u56E0\u6B64\u6D88\u9664\u4E86\u6211\u4EEC\u4E4B\u95F4\u7684\u9694\u9602\uFF08\u6211\u4EEC\u662F\u8FD9\u4E48\u51B3\u5B9A\u7684\uFF09\u3002\n"
+    dialogue: "\u518D\u52A0\u4E0A\u5F97\u77E5\u4E86\u5979\u2014\u2014\u82B9\u6CFD\u5343\u679D\u5B9E\u4E5F\u4FDD\u6709\u56DE\u6EAF\u7684\u8BB0\u5FC6\u3002\n"
     _speed: 20
 --- !u!114 &-2971647405309155704
 MonoBehaviour:
@@ -253,7 +253,76 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -3447182598098933909}
-    m_Duration: 4.85
+    m_Duration: 4
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -2971647405309155704}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: "\u65C1\u767D(100)(26)(26)"
+  - m_Version: 1
+    m_Start: 4
+    m_ClipIn: 0
+    m_Asset: {fileID: 5525572093934897361}
+    m_Duration: 6.5
     m_TimeScale: 1
     m_ParentTrack: {fileID: -2971647405309155704}
     m_EaseInDuration: 0
@@ -437,6 +506,21 @@ MonoBehaviour:
     m_DisplayName: StandSlotPointGroupClip
   m_Markers:
     m_Objects: []
+--- !u!114 &5525572093934897361
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 633a2dec5d736c04f923c46a55ca8a40, type: 3}
+  m_Name: DialogueControlClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  template:
+    dialogue: "\u5728\u9A8C\u8BC1\u4E2D\uFF0C\u6211\u88AB\u72C2\u6012\u7684\u5343\u679D\u5B9E\u6740\u5BB3\uFF0C\u60E8\u6B7B\uFF0C\u6700\u540E\u751A\u81F3\u6B89\u60C5\u4E86\uFF0C\u8FD9\u6D88\u9664\u4E86\u6211\u4EEC\u4E4B\u95F4\u7684\u9694\u9602\uFF08\u5C31\u662F\u8FD9\u4E48\u51B3\u5B9A\u7684\uFF09"
+    _speed: 20
 --- !u!114 &7472481459558531826
 MonoBehaviour:
   m_ObjectHideFlags: 1

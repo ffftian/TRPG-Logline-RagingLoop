@@ -307,7 +307,76 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 5868341671698155343}
-    m_Duration: 9.5
+    m_Duration: 5.583333333333333
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -1648036113241879943}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: "\u65C1\u767D(100)(41)(41)"
+  - m_Version: 1
+    m_Start: 5.583333333333
+    m_ClipIn: 0
+    m_Asset: {fileID: 2101822015047371411}
+    m_Duration: 3.916666666667
     m_TimeScale: 1
     m_ParentTrack: {fileID: -1648036113241879943}
     m_EaseInDuration: 0
@@ -414,6 +483,21 @@ MonoBehaviour:
   template:
     dialogue: "\u3060\u304B\u3089\u3053\u305D\u3001\u7533\u5948\u4FE1\u4EF0\u306B\u95A2\u9023\u3059\u308B\u5E7B\u60F3\u3084\u5E7B\u5F71\u3092\u5B8C\u5168\u306B\u53D7\u3051\u5165\u308C\u3066\u3057\u307E\u3063\u3066\u3044\u308B\u306E\u3060\u3002\n"
     _speed: 20
+--- !u!114 &2101822015047371411
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 633a2dec5d736c04f923c46a55ca8a40, type: 3}
+  m_Name: DialogueControlClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  template:
+    dialogue: "\u56E0\u6B64\uFF0C\u5979\u624D\u4F1A\u5B8C\u5168\u63A5\u53D7\u7533\u5948\u4FE1\u4EF0\u76F8\u5173\u7684\u5E7B\u60F3\u4E0E\u5E7B\u8C61\u3002\n"
+    _speed: 20
 --- !u!114 &4871706907804237414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -454,7 +538,7 @@ MonoBehaviour:
   m_Name: DialogueControlClip
   m_EditorClassIdentifier: 
   template:
-    dialogue: "\u5979\u77E5\u9053\u8FD9\u4E2A\u5BB4\u4F1A\u6709\u9B3C\uFF0C\u5E76\u4E14\u8BA4\u4E3A\u201C\u8FD9\u4E00\u5207\uFF0C\u8FFD\u672C\u6EAF\u6E90\u90FD\u5F97\u602A\u795E\u660E\u5927\u4EBA\u201D\uFF08\u67D0\u79CD\u7A0B\u5EA6\u4E0A\u6765\u8BF4\u4E5F\u5BF9\uFF09\u3002\u56E0\u6B64\uFF0C\u5979\u624D\u4F1A\u5B8C\u5168\u63A5\u53D7\u7533\u5948\u4FE1\u4EF0\u76F8\u5173\u7684\u5E7B\u60F3\u4E0E\u5E7B\u8C61\u3002\n"
+    dialogue: "\u5979\u77E5\u9053\u8FD9\u4E2A\u5BB4\u4F1A\u6709\u9B3C\uFF0C\u5E76\u4E14\u8BA4\u4E3A\u201C\u8FD9\u4E00\u5207\uFF0C\u90FD\u5F97\u602A\u795E\u660E\u5927\u4EBA\u201D\uFF08\u67D0\u79CD\u7A0B\u5EA6\u4E0A\u6765\u8BF4\u4E5F\u5BF9\uFF09\u3002"
     _speed: 20
 --- !u!114 &7480159851568564507
 MonoBehaviour:

@@ -312,7 +312,145 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 2610795771150079037}
-    m_Duration: 13.920000076293945
+    m_Duration: 4.85
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -1725794402342668648}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: "\u65C1\u767D(100)(58)(58)"
+  - m_Version: 1
+    m_Start: 4.85
+    m_ClipIn: 0
+    m_Asset: {fileID: 2393742469528586370}
+    m_Duration: 5.5166666666666675
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -1725794402342668648}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: "\u65C1\u767D(100)(58)(58)"
+  - m_Version: 1
+    m_Start: 10.366666666667
+    m_ClipIn: 0
+    m_Asset: {fileID: 5469509120718444006}
+    m_Duration: 5.183333333333001
     m_TimeScale: 1
     m_ParentTrack: {fileID: -1725794402342668648}
     m_EaseInDuration: 0
@@ -404,6 +542,21 @@ MonoBehaviour:
     m_ScenePreview: 1
   m_DurationMode: 0
   m_MarkerTrack: {fileID: 0}
+--- !u!114 &2393742469528586370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 633a2dec5d736c04f923c46a55ca8a40, type: 3}
+  m_Name: DialogueControlClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  template:
+    dialogue: "\u5E76\u4E14\uFF0C\u5982\u679C\u5343\u679D\u5B9E\u662F\u6709\u610F\u4E3A\u4E4B\u7684\u8BDD\uFF0C\u90A3\u4E48\u6444\u50CF\u5934\u5E94\u8BE5\u4F1A\u62CD\u4E0B\u8FD9\u4E9B\u753B\u9762\uFF0C\u9632\u60A3\u672A\u7136\u624D\u5BF9\u3002\n"
+    _speed: 20
 --- !u!114 &2610795771150079037
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -417,7 +570,7 @@ MonoBehaviour:
   m_Name: DialogueControlClip
   m_EditorClassIdentifier: 
   template:
-    dialogue: "\u4E3A\u4EC0\u4E48\u653E\u5F03\u4E86\uFF1F\u4F30\u8BA1203\u53F7\u623F\u2192202\u53F7\u623F\u548C102\u53F7\u623F\u2192202\u53F7\u623F\u8FD9\u4E24\u6761\u8DEF\u7EBF\u90FD\u88AB\u5C01\u4E86\u3002\u5E76\u4E14\uFF0C\u5982\u679C\u5343\u679D\u5B9E\u662F\u6709\u610F\u4E3A\u4E4B\u7684\u8BDD\uFF0C\u90A3\u4E48\u6444\u50CF\u5934\u5E94\u8BE5\u4F1A\u62CD\u4E0B\u8FD9\u4E9B\u753B\u9762\uFF0C\u9632\u60A3\u672A\u7136\u624D\u5BF9\u3002\u6240\u4EE5\u8FD9\u662F\u610F\u60F3\u4E0D\u5230\u7684\u95EE\u9898\u3002\u4E00\u5B9A\u662F\u4E1C\u897F\u628A\u58C1\u6A71\u5835\u4E86\u4E2A\u6C34\u6CC4\u4E0D\u901A\uFF0C\u6216\u662F\u58C1\u6A71\u94F0\u94FE\u751F\u9508\u4E86\u3002\n"
+    dialogue: "\u4E3A\u4EC0\u4E48\u653E\u5F03\u4E86\uFF1F\u4F30\u8BA1203\u53F7\u623F\u2192202\u53F7\u623F\u548C102\u53F7\u623F\u2192202\u53F7\u623F\u8FD9\u4E24\u6761\u8DEF\u7EBF\u90FD\u88AB\u5C01\u9501\u4E86\u3002\n"
     _speed: 20
 --- !u!114 &3177397734461029810
 MonoBehaviour:
@@ -433,6 +586,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     occupyStandSlot: e7030000e7030000e7030000e7030000
+--- !u!114 &5469509120718444006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 633a2dec5d736c04f923c46a55ca8a40, type: 3}
+  m_Name: DialogueControlClip(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  template:
+    dialogue: "\u6240\u4EE5\u8FD9\u662F\u610F\u60F3\u4E0D\u5230\u7684\u95EE\u9898\u3002\u58C1\u6A71\u91CC\u6CA1\u4EC0\u4E48\u4E1C\u897F\u5835\u7740\uFF0C\u53EA\u80FD\u662F\u58C1\u6A71\u7684\u94F0\u94FE\u751F\u9508\u4E86\u3002\n"
+    _speed: 20
 --- !u!114 &6328041456786857437
 MonoBehaviour:
   m_ObjectHideFlags: 1
