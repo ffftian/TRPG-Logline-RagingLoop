@@ -566,5 +566,5 @@ MonoBehaviour:
   m_Name: DialogueControlClip
   m_EditorClassIdentifier: 
   template:
-    dialogue: "\u201C\u55EF\u2014\u2014\u201D\n"
+    dialogue: "\u300C\u55EF\u2014\u2014\u300D\n"
     _speed: 20

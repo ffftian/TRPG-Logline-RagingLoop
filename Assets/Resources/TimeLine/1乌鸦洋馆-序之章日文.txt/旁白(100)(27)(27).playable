@@ -30,8 +30,8 @@ MonoBehaviour:
     m_ParentTrack: {fileID: -5930217128964791965}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -172,8 +172,8 @@ MonoBehaviour:
     m_ParentTrack: {fileID: -1712619013622103246}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: DialogueControlClip
   m_EditorClassIdentifier: 
   template:
-    dialogue: "\u306A\u308B\u307B\u3069\u3001\u306A\u308B\u307B\u3069\u3001\u79C1\u306F\u8272\u3005\u5206\u304B\u3063\u305F\u3057\u3001\u4E8B\u4EF6\u306E\u6982\u8981\u3082\u60F3\u50CF\u3067\u304D\u308B\u2015\u2015\u7279\u306B\u300E\u3069\u3053\u304C\u4EBA\u70BA\u7684\u306A\u306E\u304B\u300F\u3068\u3044\u3046\u3053\u3068\u3002\n"
+    dialogue: "\u306A\u308B\u307B\u3069\u3001\u306A\u308B\u307B\u3069\u3001\u79C1\u306F\u8272\u3005\u5206\u304B\u3063\u305F\u3057\u3001\u4E8B\u4EF6\u306E\u6982\u8981\u3082\u60F3\u50CF\u3067\u304D\u308B\u2015\u2015\u7279\u306B\u300C\u3069\u3053\u304C\u4EBA\u70BA\u7684\u306A\u306E\u304B\u300D\u3068\u3044\u3046\u3053\u3068\u3002\n"
     _speed: 20
 --- !u!114 &5156932534506175385
 MonoBehaviour:
@@ -319,8 +319,8 @@ MonoBehaviour:
     m_ParentTrack: {fileID: 7188019846447905400}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
