@@ -82,6 +82,10 @@ namespace RagingLoop
                 }
                 #endregion
 
+                if (GUILayout.Button("调用 AssetDatabase.SaveAssets()"))
+                {
+                    AssetDatabase.SaveAssets();
+                }
             }
         }
         /// <summary>

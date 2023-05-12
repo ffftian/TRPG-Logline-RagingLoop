@@ -2125,7 +2125,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u4F30\u8BA1\u4ED6\u4EEC\u5E76\u975E\u8EAB\u7A7F\u72FC\u4EBA\u88C5\u675F\u3001\u8EAB\u5F3A\u4F53\u58EE\u7684\u6751\u6C11\uFF0C\u800C\u662F\u4E00\u4E2A\u654F\u611F\u7EC6\u81F4\u7684\u591A\u4EBA\u56E2\u4F53\u3002\n"
+  m_Text: "\u4E0D\u8FC7\u5BF9\u5343\u679D\u5B9E\u6765\u8BF4\uFF0C\u6211\u548C\u5979\u654C\u5BF9\u4F3C\u4E4E\u4EE4\u5979\u6DF1\u611F\u538B\u529B\uFF0C\u90A3\u4E48\u8FD9\u79CD\u7167\u987E\u4E5F\u7B97\u662F\u6709\u6210\u6548\u7684\u5427\u3002"
 --- !u!222 &565948069
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3317,7 +3317,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5F7C\u3089\u306F\u72FC\u4EBA\u9593\u306E\u59FF\u3067\u7B4B\u8089\u8CEA\u306A\u6751\u4EBA\u3067\u306F\u306A\u304F\u3001\u654F\u611F\u306A\u8907\u6570\u4EBA\u7D44\u3060\u3068\u601D\u308F\u308C\u308B\u3002\n"
+  m_Text: "\u3067\u3082\u5343\u679D\u5B9F\u306B\u3068\u3063\u3066\u306F\u3001\u50D5\u3068\u6575\u5BFE\u3059\u308B\u306E\u306F\u30D7\u30EC\u30C3\u30B7\u30E3\u30FC\u304C\u5927\u304D\u3044\u3089\u3057\u304F\u3001\u305D\u3046\u3044\u3046\u6C17\u9063\u3044\u306F\u52B9\u679C\u304C\u3042\u308B\u306E\u304B\u3082\u3057\u308C\u306A\u3044\u3002\n"
 --- !u!222 &796886832
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7618,7 +7618,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1587220064}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: ecab325727fb7c14681a519ea6b93593, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: e35d921683d8c0f4c96430cf7bb1e811, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -9838,8 +9838,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playable: {fileID: 1587220066}
-  serialPtr: 53
-  useTimeLineAsset: {fileID: 11400000, guid: ecab325727fb7c14681a519ea6b93593, type: 2}
+  serialPtr: 63
+  useTimeLineAsset: {fileID: 11400000, guid: e35d921683d8c0f4c96430cf7bb1e811, type: 2}
   NameText: {fileID: 918001204}
   dialogue: {fileID: 796886830}
   NamePanel: {fileID: 1570342356}
@@ -12660,7 +12660,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB"
+  m_Text: "\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000"
 --- !u!222 &2020911213
 CanvasRenderer:
   m_ObjectHideFlags: 0
