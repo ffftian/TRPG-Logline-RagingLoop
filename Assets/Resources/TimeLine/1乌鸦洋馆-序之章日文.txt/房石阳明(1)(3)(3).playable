@@ -963,7 +963,7 @@ MonoBehaviour:
   m_Name: DialogueControlClip
   m_EditorClassIdentifier: 
   template:
-    dialogue: "\u300E\u5E76\u975E\u56DE\u987E\u8FC7\u53BB\uFF0C\u6C89\u6D78\u5728\u611F\u4F24\u4E4B\u4E2D\uFF0C\u800C\u662F\u771F\u6B63\u7684\u201C\u56DE\u60F3\u201D\u3002\u300F\n"
+    dialogue: "\u300E\u5E76\u975E\u56DE\u987E\u8FC7\u53BB\uFF0C\u6C89\u6D78\u5728\u611F\u4F24\u4E4B\u4E2D\uFF0C\u800C\u662F\u771F\u6B63\u7684\u300C\u56DE\u60F3\u300D\u300F\n"
     _speed: 20
 --- !u!114 &8771329148966868956
 MonoBehaviour:

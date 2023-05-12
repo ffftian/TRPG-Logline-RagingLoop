@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: StandSlotPointGroupClip
   m_EditorClassIdentifier: 
   template:
-    occupyStandSlot: e7030000e7030000e703000000000000
+    occupyStandSlot: 03000000e7030000e703000000000000
 --- !u!114 &-295153084745294297
 MonoBehaviour:
   m_ObjectHideFlags: 1

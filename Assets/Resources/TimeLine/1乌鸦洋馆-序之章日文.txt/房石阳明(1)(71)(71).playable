@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: StandSlotPointGroupClip
   m_EditorClassIdentifier: 
   template:
-    occupyStandSlot: e7030000e7030000e703000000000000
+    occupyStandSlot: 03000000e7030000e703000000000000
 --- !u!114 &-6543212720312927842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Name: DialogueControlClip
   m_EditorClassIdentifier: 
   template:
-    dialogue: "\u201C\u6211\u4EEC\u7684\u786E\u90FD\u5F53\u72FC\u4E86\u554A\uFF1F\uFF01\u201D\n"
+    dialogue: "\u300C\u6211\u4EEC\u7684\u786E\u90FD\u5F53\u72FC\u4E86\u554A\uFF1F\uFF01\u300D"
     _speed: 20
 --- !u!114 &6736708070947826045
 MonoBehaviour:

@@ -973,5 +973,5 @@ MonoBehaviour:
   m_Name: DialogueControlClip(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   template:
-    dialogue: "\u88AB\u9730\u5F39\u67AA\u6253\u4E86\u59D1\u4E14\u8FD8\u662F\u5F88\u75DB\u7684\uFF0C\u55EF\uFF0C\u59D1\u4E14\u8BD5\u7740\u9003\u8DD1\u5427\u3002"
+    dialogue: "\u88AB\u9730\u5F39\u67AA\u6253\u4E86\u59D1\u4E14\u8FD8\u662F\u5F88\u75DB\u7684\uFF0C\u55EF\uFF0C\u59D1\u4E14\u8BD5\u7740\u9003\u8DD1\u5427"
     _speed: 20
