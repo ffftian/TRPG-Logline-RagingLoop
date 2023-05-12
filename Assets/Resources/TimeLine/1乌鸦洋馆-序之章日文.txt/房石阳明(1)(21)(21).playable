@@ -261,7 +261,25 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -288,7 +306,25 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -953,7 +989,7 @@ MonoBehaviour:
   m_Name: DialogueControlClip
   m_EditorClassIdentifier: 
   template:
-    dialogue: "\u300C\u592A\u5931\u793C\u4E86\u3002\u81F3\u5C11\u6211\u7684\u884C\u52A8\u5341\u5206\u7406\u667A\uFF0C\u53EA\u662F\u6B63\u5728\u5DE5\u4F5C\u4E2D\uFF0C\u56DE\u7B54\u5F97\u542B\u7CCA\u4E86\u70B9\uFF0C\u5C31\u9976\u4E86\u6211\u5427\u3002\u300D"
+    dialogue: "\u300C\u592A\u5931\u793C\u4E86\u5427\u3002\u81F3\u5C11\u6211\u7684\u884C\u52A8\u5341\u5206\u7406\u667A\uFF0C\u53EA\u662F\u6B63\u5728\u5DE5\u4F5C\u4E2D\uFF0C\u56DE\u7B54\u5F97\u542B\u7CCA\u4E86\u70B9\uFF0C\u5C31\u9976\u4E86\u6211\u5427\u300D"
     _speed: 20
 --- !u!114 &6474978628876960908
 MonoBehaviour:

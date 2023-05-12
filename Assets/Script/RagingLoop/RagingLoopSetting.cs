@@ -21,7 +21,7 @@ public struct SaveCasheName
 public static class RagingLoopSetting
 {
     public static Dictionary<string, string> NameToJPNameText = new Dictionary<string, string>();
-
+    public static Dictionary<string, string> NameToCHNameText = new Dictionary<string, string>();
 
 
     const string bustAdvPath = "Setting/bustAdv";
@@ -45,6 +45,24 @@ public static class RagingLoopSetting
         NameToJPNameText.Add("狼老头", "狼老头");
         NameToJPNameText.Add("马宫久子", "馬宮　久子");
         NameToJPNameText.Add("桥本雄大", "橋本　雄大");
+
+        NameToCHNameText.Add("房石阳明", "房石　阳明");
+        NameToCHNameText.Add("咩子", "咩子");
+        NameToCHNameText.Add("美佐峰美辻", "美佐峰　美辻");
+        NameToCHNameText.Add("芹泽千枝实", "芹泽　千枝实");
+        NameToCHNameText.Add("回末李花子", "回末　李花子");
+        NameToCHNameText.Add("卷岛春", "卷岛　春");
+        NameToCHNameText.Add("织部泰长", "织部　泰长");
+        NameToCHNameText.Add("酿田近望", "酿田　近望");
+        NameToCHNameText.Add("织部义次", "织部　义次");
+        NameToCHNameText.Add("织部香织", "织部　香织");
+        NameToCHNameText.Add("能里清之介", "能里　清之介");
+        NameToCHNameText.Add("室匠", "室　匠");
+        NameToCHNameText.Add("卷岛宽造", "卷岛　宽造");
+        NameToCHNameText.Add("山胁多惠", "山胁　多惠");
+        NameToCHNameText.Add("狼老头", "狼老头");
+        NameToCHNameText.Add("马宫久子", "马宫　久子");
+        NameToCHNameText.Add("桥本雄大", "桥本　雄大");
     }
     public static void Init(Dictionary<string, ImgBustAdv> bustAdv)
     {

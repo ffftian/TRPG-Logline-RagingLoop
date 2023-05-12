@@ -147,25 +147,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -192,25 +174,7 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -261,7 +225,7 @@ MonoBehaviour:
   m_Name: DialogueControlClip
   m_EditorClassIdentifier: 
   template:
-    dialogue: "\u4E00\u3001\u6211\u4F5C\u4E3A\u65C1\u89C2\u8005\u3001\u5728\u7EC7\u90E8\u6CF0\u957F\u541B\u5F53\u72FC\u7684\u8DEF\u7EBF\u91CC\uFF0C\u5206\u914D\u7684\u987A\u5E8F\u662F\u4ECE101\u53F7\u623F\uFF08\u671B\u4ED4\uFF09\u5230102\u53F7\u623F\uFF08\u6CF0\u957F\uFF09\uFF0C\u4F46\u9664\u6B64\u4E4B\u5916\u7684\u8DEF\u7EBF\u5374\u662F\u4ECE102\u53F7\u623F\u5230101\u53F7\u623F\u3002\n"
+    dialogue: "\u4E00\u3001\u6211\u4F5C\u4E3A\u65C1\u89C2\u8005\u3001\u5728\u7EC7\u90E8\u6CF0\u957F\u541B\u5F53\u72FC\u7684\u8DEF\u7EBF\u91CC\uFF0C\n\u5206\u914D\u7684\u987A\u5E8F\u662F\u4ECE101\u53F7\u623F\uFF08\u671B\u4ED4\uFF09\u5230102\u53F7\u623F\uFF08\u6CF0\u957F\uFF09\uFF0C\u4F46\u9664\u6B64\u4E4B\u5916\u7684\u8DEF\u7EBF\u5374\u662F\u4ECE102\u53F7\u623F\u5230101\u53F7\u623F\u3002\n"
     _speed: 20
 --- !u!114 &-2930162092572343145
 MonoBehaviour:

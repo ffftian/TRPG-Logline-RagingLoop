@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: DialogueControlClip(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   template:
-    dialogue: "\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB"
+    dialogue: "\u3000\u3000\u3000\u3000\u3000\u3000\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB"
     _speed: 20
 --- !u!114 &2742251913861740107
 MonoBehaviour:

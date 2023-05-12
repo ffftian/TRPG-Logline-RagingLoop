@@ -167,25 +167,7 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -260,25 +242,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -307,7 +271,7 @@ MonoBehaviour:
   m_Name: DialogueControlClip
   m_EditorClassIdentifier: 
   template:
-    dialogue: "\u4ECA\u5929\u662F\u300E5\u670812\u65E5\u300F\u3002\u6628\u5929\u6211\u4F5C\u4E3A\u4E00\u540D\u60F3\u8981\u81EA\u6740\u7684\u53EF\u601C\u4EBA\u6F5C\u5165\u4E86\u85E4\u826F\u6751\uFF0C\u5230\u4ECA\u5929\u5DF2\u662F\u4F11\u6C34\u6751\u843D\u7684\u6751\u6C11\uFF0C\u88AB\u5927\u5BB6\u6240\u63A5\u53D7\u4E86\u3002\n"
+    dialogue: "\u4ECA\u5929\u662F\u300E5\u670812\u65E5\u300F\u3002\u6628\u5929\u6211\u4F5C\u4E3A\u4E00\u540D\u60F3\u8981\u81EA\u6740\u7684\u53EF\u601C\u4EBA\u6F5C\u5165\u4E86\u85E4\u826F\u6751\uFF0C\u4F46\u73B0\u5728\u4ECA\u5929\u5DF2\u7ECF\u662F\u4F11\u6C34\u6751\u843D\u7684\u6751\u6C11\uFF0C\u88AB\u5927\u5BB6\u6240\u63A5\u53D7\u4E86\u3002"
     _speed: 20
 --- !u!114 &-1042996290626018654
 MonoBehaviour:
