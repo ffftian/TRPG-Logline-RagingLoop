@@ -1361,7 +1361,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1135537312}
   m_Father: {fileID: 2056818836}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2125,7 +2126,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u300C\u6211\u8BF4\uFF0C\u9633\u660E\u5148\u751F\u2026\u2026\u300D\n"
+  m_Text: 
 --- !u!222 &565948069
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3317,7 +3318,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u300C\u306D\u3048\u3001\u967D\u660E\u3055\u3093\u2026\u2026\u300D\n"
+  m_Text: 
 --- !u!222 &796886832
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4194,8 +4195,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1135537312}
+  m_Children: []
   m_Father: {fileID: 890092782}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4632,7 +4632,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 956380164}
+    m_TransformParent: {fileID: 259530261}
     m_Modifications:
     - target: {fileID: 932113987610742921, guid: faa36ceda9d3f6a4ea8ccea032728915, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4844,7 +4844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3538322377698492447, guid: faa36ceda9d3f6a4ea8ccea032728915, type: 3}
       propertyPath: m_Pivot.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3538322377698492447, guid: faa36ceda9d3f6a4ea8ccea032728915, type: 3}
       propertyPath: m_RootOrder
@@ -4856,7 +4856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3538322377698492447, guid: faa36ceda9d3f6a4ea8ccea032728915, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3538322377698492447, guid: faa36ceda9d3f6a4ea8ccea032728915, type: 3}
       propertyPath: m_AnchorMin.x
@@ -4864,7 +4864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3538322377698492447, guid: faa36ceda9d3f6a4ea8ccea032728915, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3538322377698492447, guid: faa36ceda9d3f6a4ea8ccea032728915, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4876,11 +4876,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3538322377698492447, guid: faa36ceda9d3f6a4ea8ccea032728915, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.83
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3538322377698492447, guid: faa36ceda9d3f6a4ea8ccea032728915, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.83
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3538322377698492447, guid: faa36ceda9d3f6a4ea8ccea032728915, type: 3}
       propertyPath: m_LocalScale.z
@@ -4916,11 +4916,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3538322377698492447, guid: faa36ceda9d3f6a4ea8ccea032728915, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -156
+      value: 307
       objectReference: {fileID: 0}
     - target: {fileID: 3538322377698492447, guid: faa36ceda9d3f6a4ea8ccea032728915, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3538322377698492447, guid: faa36ceda9d3f6a4ea8ccea032728915, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7618,7 +7618,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1587220064}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 6273e471cfd71034896fb3f665ddd572, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 08107ecc59649fc46aa684217feae152, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -9718,8 +9718,6 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 8847409998874969285, guid: 9c7181ec9a9a4b0499344cb402466327, type: 2}
     value: {fileID: 2020911211}
-  - key: {fileID: -381539260619619431, guid: 289360c4428e69c49b8e6595d65ddfb2, type: 2}
-    value: {fileID: 0}
   - key: {fileID: 3472115901786089840, guid: 0f0abaca8cf5386448a156902a96c065, type: 2}
     value: {fileID: 1570342355}
   - key: {fileID: -700977701009971786, guid: f8f26bc0d237b7747874a9509d60cfac, type: 2}
@@ -9818,11 +9816,13 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -7647423241246774082, guid: ad60325c52692c240911b889e8f7e786, type: 2}
     value: {fileID: 0}
-  - key: {fileID: 7948274617159611570, guid: 0679c6d614c975f4faf08eea5915143e, type: 2}
-    value: {fileID: 0}
   - key: {fileID: -4099133513072654958, guid: 6273e471cfd71034896fb3f665ddd572, type: 2}
     value: {fileID: 1570342355}
   - key: {fileID: 456963759296122363, guid: aadfab9f6bd8bd04e83a95dd890bbd53, type: 2}
+    value: {fileID: 1570342355}
+  - key: {fileID: 1545108276527618653, guid: 289360c4428e69c49b8e6595d65ddfb2, type: 2}
+    value: {fileID: 1570342355}
+  - key: {fileID: 306735088222107982, guid: 0679c6d614c975f4faf08eea5915143e, type: 2}
     value: {fileID: 1570342355}
   m_ExposedReferences:
     m_References:
@@ -9840,8 +9840,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playable: {fileID: 1587220066}
-  serialPtr: 14
-  useTimeLineAsset: {fileID: 11400000, guid: 6273e471cfd71034896fb3f665ddd572, type: 2}
+  serialPtr: 96
+  useTimeLineAsset: {fileID: 11400000, guid: 08107ecc59649fc46aa684217feae152, type: 2}
   NameText: {fileID: 918001204}
   dialogue: {fileID: 796886830}
   NamePanel: {fileID: 1570342356}
@@ -12662,7 +12662,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "  \u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u30FB\u30FB"
+  m_Text: 
 --- !u!222 &2020911213
 CanvasRenderer:
   m_ObjectHideFlags: 0

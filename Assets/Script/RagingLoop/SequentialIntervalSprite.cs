@@ -47,7 +47,8 @@ public class SequentialIntervalSprite
             if (this.sprites[i] != sprites[i])
             {
                 BlinkEye();
-                delta = 0;
+                delta -= delta;
+                CurrentFrame = 0;
                 image.sprite = sprites[0];
             }
         }
