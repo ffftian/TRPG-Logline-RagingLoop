@@ -16,6 +16,8 @@ public struct SaveCasheName
     public string[] casheBrow;
     public string[] casheEye;
     public string[] casheMouth;
+
+    //public string[] casheFace;
 }
 
 public static class RagingLoopSetting
@@ -60,7 +62,7 @@ public static class RagingLoopSetting
         NameToCHNameText.Add("室匠", "室　匠");
         NameToCHNameText.Add("卷岛宽造", "卷岛　宽造");
         NameToCHNameText.Add("山胁多惠", "山胁　多惠");
-        NameToCHNameText.Add("狼老头", "狼老头");
+        NameToCHNameText.Add("狼爷爷", "狼爷爷");
         NameToCHNameText.Add("马宫久子", "马宫　久子");
         NameToCHNameText.Add("桥本雄大", "桥本　雄大");
     }

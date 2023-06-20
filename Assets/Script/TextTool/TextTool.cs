@@ -47,10 +47,10 @@ public static class TextTool
     {
         string[] SingleConversation = Regex.Split(text, "\\r\\n\\r\\n");
         //string[] SingleConversation = Regex.Split(text, "(?=.?\\([0-9]+\\))");
-
         for (int i = 0; i < SingleConversation.Length; i++)
         {
             CommonTextData txt = new CommonTextData();
+            txt.saveArrayIndex = false;
             txt.Analysis(SingleConversation[i], i, error);
             yield return txt as T;
         }

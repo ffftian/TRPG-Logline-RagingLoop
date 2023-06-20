@@ -56,14 +56,17 @@ namespace RagingLoop
                     serialPtr++;
                 EditorGUI.EndDisabledGroup();
                 EditorGUILayout.EndHorizontal();
-                CommonTextData checkedMeesage = component.messageAsset.messageDataList[serialPtr];
-                EditorGUILayout.TextField(checkedMeesage.textId);
-                EditorGUILayout.TextField(checkedMeesage.name);
-                EditorGUILayout.TextArea(checkedMeesage.log, GUI.skin.textArea);
+                CommonTextData checkedMessage = component.messageAsset.messageDataList[serialPtr];
+                CommonTextData checkedMessageCN = component.messageAssetCN.messageDataList[serialPtr];
+
+                EditorGUILayout.TextField(checkedMessage.textId);
+                EditorGUILayout.TextField(checkedMessage.name);
+                EditorGUILayout.TextArea(checkedMessage.log, GUI.skin.textArea);
+                EditorGUILayout.TextArea(checkedMessageCN.log, GUI.skin.textArea);
 
                 if (component.useTimeLineAsset == null)
                 {
-                    string timelinePath = $@"Assets\Resources\{QQLogSettings.TimeLineDirectory}\{component.messageAsset.name}\{checkedMeesage.SaveID}.playable";
+                    string timelinePath = $@"Assets\Resources\{QQLogSettings.TimeLineDirectory}\{component.messageAsset.name}\{checkedMessage.SaveID}.playable";
                     EditorGUILayout.LabelField($@"Timeline未能找到:{timelinePath}");
                 }
                 #endregion

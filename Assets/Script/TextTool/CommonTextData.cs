@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 [Serializable]
 public class CommonTextData : BaseTextData
 {
+    /// <summary>
+    /// 是否保存由数组产生的序号
+    /// </summary>
+    public bool saveArrayIndex { get; set; } = true;
     public override string GroupID => groupID;
     public string groupID;
     //public override string GroupID => name;
@@ -25,7 +29,14 @@ public class CommonTextData : BaseTextData
                         string[] value = Regex.Split(singleConversation[i], "\\(|\\)", RegexOptions.IgnoreCase);
                         name = value[0];
                         groupID = value[1];
-                        textId = $"{singleConversation[i]}({Serial})";
+                        if(saveArrayIndex)
+                        {
+                            textId = $"{singleConversation[i]}({Serial})";
+                        }
+                        else
+                        {
+                            textId = singleConversation[i];
+                        }
                         break;
                     default:
                         log += singleConversation[i] + "\n";//剩下的为log

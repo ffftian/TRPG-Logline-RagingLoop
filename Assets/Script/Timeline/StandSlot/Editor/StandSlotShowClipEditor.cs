@@ -56,8 +56,6 @@ namespace RagingLoop
                 Behaviour.browIndex = Behaviour.overallIndex;
                 Behaviour.eyeIndex = Behaviour.overallIndex;
                 Behaviour.overallIndex = Behaviour.overallIndex;
-               // 
-              //  AssetDatabase.SaveAssets();
             }
             if(dirty)
             {

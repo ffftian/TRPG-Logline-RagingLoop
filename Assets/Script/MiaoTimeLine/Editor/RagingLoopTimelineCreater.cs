@@ -70,7 +70,7 @@ namespace RagingLoop
             }
             else
             {
-                ClipLength = dialogue.Length * 0.08f;
+                ClipLength = dialogue.Length * 0.10f;
                 clip.duration = ClipLength;
             }
             TimelineClip transClip = translateDialogueControlTrack.CreateClip<DialogueControlClip>();
@@ -84,7 +84,7 @@ namespace RagingLoop
             }
             else
             {
-                ClipLength = dialogue.Length * 0.08f;
+                ClipLength = dialogue.Length * 0.10f;
                 transClip.duration = ClipLength;
             }
 

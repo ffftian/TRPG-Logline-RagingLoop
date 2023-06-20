@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fc49f333df2b64480d2a1becfbccd1, type: 3}
   m_Name: BilingualTextSetting
   m_EditorClassIdentifier: 
-  commonTextAsset: {fileID: 11400000, guid: b14e1e5b4d0aae545b274d338583a73a, type: 2}
-  messageListRange: {x: 55, y: 109}
-  SecondTextAsset: {fileID: 11400000, guid: bc5ee4ae29f534d44848650b0dcdba73, type: 2}
+  commonTextAsset: {fileID: 0}
+  messageListRange: {x: 0, y: 0}
+  SecondTextAsset: {fileID: 0}

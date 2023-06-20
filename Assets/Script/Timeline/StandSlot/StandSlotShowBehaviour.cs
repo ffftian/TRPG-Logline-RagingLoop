@@ -7,14 +7,24 @@ namespace RagingLoop
     public class StandSlotShowBehaviour : PlayableBehaviour
     {
         public Vector3 position;
+
+        public int faceIndex;
+
         public int overallIndex;
         public int browIndex;
         public int eyeIndex;
         public int mouthIndex;
 
         public StandSlot StandSlot { get; set; }
+        public StandSlotFace StandSlotFace { get; set; }
 
         public override void ProcessFrame(Playable playable, FrameData info, object playerData)
+        {
+            StandSlotUpdate(playerData);
+            StandSlotFaceUpdate(playerData);
+        }
+
+        public void StandSlotUpdate(object playerData)
         {
             if (StandSlot == null)
             {
@@ -26,7 +36,7 @@ namespace RagingLoop
             }
             StandSlot.ChangeBrow(browIndex);
 
-            if(Application.isPlaying)
+            if (Application.isPlaying)
             {
                 StandSlot.TickEye(eyeIndex);
             }
@@ -37,6 +47,21 @@ namespace RagingLoop
 
             StandSlot.ChangeMouth(mouthIndex);
         }
+
+        public void StandSlotFaceUpdate(object playerData)
+        {
+            if (StandSlotFace == null)
+            {
+                StandSlotFace = (StandSlotFace)playerData;
+                if (StandSlotFace == null)
+                {
+                    return;
+                }
+            }
+            StandSlotFace.ChangeFace(faceIndex);
+
+        }
+
         /// <summary>
         /// 多调几次无所谓，反正人狼村效果是瞬间切换
         /// </summary>

@@ -22,7 +22,6 @@ namespace RagingLoop
             bustAdvConfig = BustAdvConfig.LoadSettings();
             component = (StandSlot)target;
             //string[] body = component.casheBody.Select(c => c.name).ToArray();
-
             //int length = component.casheBrow.Count;
             string[] brows = bustAdvConfig.AdvCasheName[component.id-1].casheBrow;
             string[] eyes = bustAdvConfig.AdvCasheName[component.id - 1].casheEye;

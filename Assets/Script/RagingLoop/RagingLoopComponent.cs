@@ -12,7 +12,8 @@ namespace RagingLoop
     {
         public RectTransform NamePanel;
         public CommonTextAsset messageAsset;
-        public List<StandSlot> characters = new List<StandSlot>();
+        public CommonTextAsset messageAssetCN;
+        public List<StandSlotBase> characters = new List<StandSlotBase>();
         public StandSlotPointGroup StandSlotPointGroup;
         public TyperDialogue dialogueCN;
 
@@ -34,7 +35,7 @@ namespace RagingLoop
             playable.playableAsset = useTimeLineAsset;
 #if UNITY_EDITOR//预赋值设置
 
-            if(useTimeLineAsset.GetRootTrack(0) is MarkerTrack)
+            if(useTimeLineAsset==null || useTimeLineAsset.GetRootTrack(0) is MarkerTrack)
             {
                 return;
             }
@@ -45,7 +46,7 @@ namespace RagingLoop
                    int groupID =  int.Parse(serialData.GroupID);
                     if (groupID < characters.Count && groupID > 0)
                     {
-                        StandSlot standSlot = characters[groupID - 1];
+                        StandSlotBase standSlot = characters[groupID - 1];
                         playable.SetGenericBinding(useTimeLineAsset.GetRootTrack(0), standSlot);
                     }
                 }

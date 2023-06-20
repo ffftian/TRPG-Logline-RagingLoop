@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.XR;
 
 namespace RagingLoop
 {
@@ -15,13 +16,24 @@ namespace RagingLoop
 
         public SingleSlotPopup singleSlotPopup;
 
+        private StandSlotSetting standSlotSetting;
+        private BustAdvConfig bustAdvConfig;
+
         private void OnEnable()
         {
-            component = (StandSlotFace)target;
+
 
             string[] faces = component.casheFace.Select(a => a.name).ToArray();
+            //string[] faces = bustAdvConfig.AdvCasheName[component.id - 1].casheFace;
+
+
+            standSlotSetting = StandSlotSetting.LoadSetting();
+            component = (StandSlotFace)target;
 
             singleSlotPopup = new SingleSlotPopup(faces, "面部");
+            standSlotSetting = StandSlotSetting.LoadSetting();
+
+            standSlotSetting.GetSlotLabel(component.name, faces.Length - 1);
         }
         public override void OnInspectorGUI()
         {
