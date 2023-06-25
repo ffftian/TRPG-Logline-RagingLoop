@@ -64,10 +64,11 @@ public static class RagingLoopSetting
         NameToCHNameText.Add("马宫久子", "马宫　久子");
         NameToCHNameText.Add("桥本雄大", "桥本　雄大");
     }
-    public static void Init(Dictionary<string, ImgBustAdv> bustAdv)
+    public static void Init(Dictionary<string, List<ImgBustAdv>> bustAdv)
     {
         TextAsset textAsset = Resources.Load<TextAsset>(bustAdvPath);
         InputBustAdv(bustAdv, textAsset.text);
+        Debug.Log("附加成功");
     }
 
     //public static string GetAdvBrow(int id,int index)
@@ -88,8 +89,13 @@ public static class RagingLoopSetting
     //    return bustAdvConfig.AdvCasheName[id - 1].casheMouth[index];
     //}
 
+    public static void 置入旧有数据()
+    {
+        BustAdvConfig bustAdvConfig = BustAdvConfig.LoadSettings();
 
-    private static void InputBustAdv(Dictionary<string, ImgBustAdv> BustAdv, string analysis)
+    }
+
+    private static void InputBustAdv(Dictionary<string, List<ImgBustAdv>> BustAdv, string analysis)
     {
         string[] sp = analysis.Split('\n');
 
@@ -110,19 +116,28 @@ public static class RagingLoopSetting
                     imgBustAdv.s = int.Parse(match[8].Value);//#ImgScale最后一位参数
                     string key = $"{imgBustAdv.slot}_{imgBustAdv.number}";
 
-                    if (!BustAdv.ContainsKey(key))
+
+                    if (BustAdv.TryGetValue(key, out List<ImgBustAdv> imgBuestAdvList))
                     {
-                        BustAdv.Add(key, imgBustAdv);
+                        bool have = false;
+                        for(int j =0;j< imgBuestAdvList.Count; j++)
+                        {
+                            if (imgBuestAdvList[0].xy == imgBustAdv.xy && imgBuestAdvList[0].s == imgBustAdv.s)
+                            {
+                                have = true;
+                            }
+
+                        }
+                        if(!have)
+                        {
+                            imgBuestAdvList.Add(imgBustAdv);
+                        }
                     }
-                    //if (BustAdv.TryGetValue(key, out List<ImgBustAdv> imgBuestAdvList))
-                    //{
-                    //    imgBuestAdvList.Add(imgBustAdv);
-                    //}
-                    //else
-                    //{
-                    //    BustAdv.Add(key, imgBuestAdvList = new List<ImgBustAdv>());
-                    //    imgBuestAdvList.Add(imgBustAdv);
-                    //}
+                    else
+                    {
+                        BustAdv.Add(key, imgBuestAdvList = new List<ImgBustAdv>());
+                        imgBuestAdvList.Add(imgBustAdv);
+                    }
                 }
                 catch (Exception e)
                 {
@@ -131,6 +146,49 @@ public static class RagingLoopSetting
             }
         }
     }
+    //private static void InputBustAdv(Dictionary<string, ImgBustAdv> BustAdv, string analysis)
+    //{
+    //    string[] sp = analysis.Split('\n');
+
+    //    BustAdv.Clear();
+    //    for (int i = 0; i < sp.Length; i++)
+    //    {
+    //        MatchCollection match = Regex.Matches(sp[i], "[0-9\\-]+");
+    //        //try
+    //        if (match.Count >= 8)
+    //        {
+    //            ImgBustAdv imgBustAdv = new ImgBustAdv();
+    //            try
+    //            {
+    //                imgBustAdv.slot = int.Parse(match[0].Value);
+    //                imgBustAdv.number = int.Parse(match[1].Value);
+    //                imgBustAdv.xy.x = int.Parse(match[2].Value);
+    //                imgBustAdv.xy.y = int.Parse(match[3].Value);
+    //                imgBustAdv.s = int.Parse(match[8].Value);//#ImgScale最后一位参数
+    //                string key = $"{imgBustAdv.slot}_{imgBustAdv.number}";
+    //                if (!BustAdv.ContainsKey(key))
+    //                {
+    //                    BustAdv.Add(key, imgBustAdv);
+    //                }
+    //                //if (BustAdv.TryGetValue(key, out List<ImgBustAdv> imgBuestAdvList))
+    //                //{
+    //                //    imgBuestAdvList.Add(imgBustAdv);
+    //                //}
+    //                //else
+    //                //{
+    //                //    BustAdv.Add(key, imgBuestAdvList = new List<ImgBustAdv>());
+    //                //    imgBuestAdvList.Add(imgBustAdv);
+    //                //}
+    //            }
+    //            catch (Exception e)
+    //            {
+    //                Debug.LogError($"错误的读取序号{i}内容{match}");
+    //            }
+    //        }
+    //    }
+    //}
+
+
     public static ImgBustAdv GetBustAdv(int slot, int number)
     {
 #if UNITY_EDITOR

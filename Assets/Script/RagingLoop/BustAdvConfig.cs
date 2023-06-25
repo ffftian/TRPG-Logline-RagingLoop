@@ -10,8 +10,7 @@ using UnityEngine;
 public class BustAdvConfig : BaseOdinSettings<BustAdvConfig>
 {
 
-
-
+    public Dictionary<string, List<ImgBustAdv>> BustAdvList = new Dictionary<string, List<ImgBustAdv>>();
     public Dictionary<string, ImgBustAdv> BustAdv = new Dictionary<string, ImgBustAdv>();
     public SaveCasheName[] AdvCasheName;
 
@@ -80,13 +79,19 @@ public class BustAdvConfig : BaseOdinSettings<BustAdvConfig>
     }
 
 
-    [MenuItem("文本编辑器/创建半身立绘设置")]
+    [MenuItem("文本编辑器/创建半身立绘数据")]
     static void BustAdvConfigCreater()
     {
         BustAdvConfig bustAdvConfig = LoadSettings();
-        RagingLoopSetting.Init(bustAdvConfig.BustAdv);
+        RagingLoopSetting.Init(bustAdvConfig.BustAdvList);
         EditorUtility.SetDirty(bustAdvConfig);
     }
+    [MenuItem("文本编辑器/置入旧有数据")]
+    static void BuestAdd()
+    {
+        RagingLoopSetting.置入旧有数据();
+    }
+
 #endif
 }
 
