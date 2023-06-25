@@ -9,6 +9,9 @@ using UnityEngine;
 [SettingsName("BustAdvConfig.asset")]
 public class BustAdvConfig : BaseOdinSettings<BustAdvConfig>
 {
+
+
+
     public Dictionary<string, ImgBustAdv> BustAdv = new Dictionary<string, ImgBustAdv>();
     public SaveCasheName[] AdvCasheName;
 
@@ -20,38 +23,57 @@ public class BustAdvConfig : BaseOdinSettings<BustAdvConfig>
 
         StandSlotPointGroup standSlotPointGroup = GameObject.FindObjectOfType<StandSlotPointGroup>();
 
-        bustAdvConfig.AdvCasheName = new SaveCasheName[standSlotPointGroup.standSlotGroup.Length];
+        //bustAdvConfig.AdvCasheName = new SaveCasheName[standSlotPointGroup.standSlotGroup.Length];
 
         for (int i = 0; i < standSlotPointGroup.standSlotGroup.Length; i++)
         {
             StandSlotBase standSlotBase = standSlotPointGroup.standSlotGroup[i].GetComponent<StandSlotBase>();
-
-            StandSlot standSlot = standSlotBase as StandSlot;
             SaveCasheName saveCasheName = new SaveCasheName();
             saveCasheName.name = standSlotPointGroup.standSlotGroup[i].name;
+            //这里改了就没动过，临时的，给标准名称索引赋值的
+            //StandSlot standSlot = standSlotBase as StandSlot;
+            //if (standSlot != null)
+            //{
+            //    int count = standSlot.casheBrow.Count;
+            //    saveCasheName.casheBrow = new string[count];
+            //    for (int j = 0; j < count; j++)
+            //    {
+            //        if (string.IsNullOrEmpty(standSlot.casheBrow[j]))
+            //        {
+            //            saveCasheName.casheBrow[j] = standSlot.casheBrow[j].name;
+            //        }
+            //    }
+            //    count = standSlot.casheEye.Count;
+            //    saveCasheName.casheEye = new string[count];
+            //    for (int j = 0; j < count; j++)
+            //    {
+            //        if (string.IsNullOrEmpty(standSlot.casheEye[j]))
+            //        {
+            //            saveCasheName.casheEye[j] = standSlot.casheEye[j].name;
+            //        }
+            //    }
+            //    count = standSlot.casheMouth.Count;
+            //    saveCasheName.casheMouth = new string[count];
+            //    for (int j = 0; j < count; j++)
+            //    {
+            //        if (string.IsNullOrEmpty(saveCasheName.casheMouth[j]))
+            //        {
+            //            saveCasheName.casheMouth[j] = standSlot.casheMouth[j].name;
+            //        }
+            //    }
+            //}
 
-            if (standSlot != null)
+            StandSlotFace standSlotFace = standSlotBase as StandSlotFace;
+            if (standSlotFace != null)
             {
-                int count = standSlot.casheBrow.Count;
-                saveCasheName.casheBrow = new string[count];
-                for (int j = 0; j < count; j++)
-                {
-                    saveCasheName.casheBrow[j] = standSlot.casheBrow[j].name;
-                }
-                count = standSlot.casheEye.Count;
-                saveCasheName.casheEye = new string[count];
-                for (int j = 0; j < count; j++)
-                {
-                    saveCasheName.casheEye[j] = standSlot.casheEye[j].name;
-                }
-                count = standSlot.casheMouth.Count;
+                int count = standSlotFace.casheFace.Count;
                 saveCasheName.casheMouth = new string[count];
                 for (int j = 0; j < count; j++)
                 {
-                    saveCasheName.casheMouth[j] = standSlot.casheMouth[j].name;
+                    saveCasheName.casheMouth[j] = standSlotFace.casheFace[j].name;
                 }
+                bustAdvConfig.AdvCasheName[i] = saveCasheName;
             }
-            bustAdvConfig.AdvCasheName[i] = saveCasheName;
         }
         Debug.Log("保存成功");
         EditorUtility.SetDirty(bustAdvConfig);

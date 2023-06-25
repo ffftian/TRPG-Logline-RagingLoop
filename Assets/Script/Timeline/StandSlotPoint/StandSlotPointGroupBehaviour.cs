@@ -12,8 +12,8 @@ namespace RagingLoop
     {
         public StandSlotPointGroup standSlotPointGroup { get; set; }
 
-        [HideInInspector]
-        public int[] occupyStandSlot = new int[4] {999,999,999,999 };//临时的，这样没准有用
+        [HideInInspector]//临时的，设置占用格子
+        public int[] occupyStandSlot = new int[7] {999,999,999,999,999,999,999 };
 
 
         public override void ProcessFrame(Playable playable, FrameData info, object playerData)

@@ -15,9 +15,16 @@ public class SingleSlotPopup
         this.slots = slots;
         this.name = name;
     }
-    public void OnInspectorGUI(ref int Index)
+    public bool OnInspectorGUI(ref int Index)
     {
+        bool dirty = false;
+        int cashe = Index;
         Index = EditorGUILayout.Popup(name, Index, slots);
+        if(cashe!= Index)
+        {
+            dirty = true;
+        }
+        return dirty;
     }
 }
 

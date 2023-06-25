@@ -16,8 +16,6 @@ public struct SaveCasheName
     public string[] casheBrow;
     public string[] casheEye;
     public string[] casheMouth;
-
-    //public string[] casheFace;
 }
 
 public static class RagingLoopSetting

@@ -55,7 +55,7 @@ namespace RagingLoop
             if (Speak != null)
             {
                 SpeakTrack.CreateClip(Speak);
-                ClipLength = Speak.length;
+                ClipLength = Speak.length + 0.5f;
             }
 
             
@@ -71,6 +71,11 @@ namespace RagingLoop
             else
             {
                 ClipLength = dialogue.Length * 0.10f;
+                if(ClipLength < 2)
+                {
+                    ClipLength += 0.5f;
+                }
+
                 clip.duration = ClipLength;
             }
             TimelineClip transClip = translateDialogueControlTrack.CreateClip<DialogueControlClip>();
@@ -86,6 +91,10 @@ namespace RagingLoop
             {
                 ClipLength = dialogue.Length * 0.10f;
                 transClip.duration = ClipLength;
+                if (ClipLength < 2)
+                {
+                    ClipLength += 0.5f;
+                }
             }
 
             //clip = dialogueControlTrack.CreateClip<DialogueControlClip>();

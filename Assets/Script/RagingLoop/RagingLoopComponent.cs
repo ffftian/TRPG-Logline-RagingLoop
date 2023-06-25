@@ -80,7 +80,7 @@ namespace RagingLoop
             {
 
                 NamePanel.gameObject.SetActive(true);
-                NameText.text = $"{RagingLoopSetting.NameToCHNameText[name]}";
+                NameText.text = $"{RagingLoopSetting.NameToJPNameText[name]}";
             }
         }
 

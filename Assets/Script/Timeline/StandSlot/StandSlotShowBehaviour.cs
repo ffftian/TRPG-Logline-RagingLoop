@@ -28,7 +28,7 @@ namespace RagingLoop
         {
             if (StandSlot == null)
             {
-                StandSlot = (StandSlot)playerData;
+                StandSlot = playerData as StandSlot;
                 if (StandSlot == null)
                 {
                     return;
@@ -52,7 +52,7 @@ namespace RagingLoop
         {
             if (StandSlotFace == null)
             {
-                StandSlotFace = (StandSlotFace)playerData;
+                StandSlotFace = playerData as StandSlotFace;
                 if (StandSlotFace == null)
                 {
                     return;

@@ -25,39 +25,64 @@ namespace RagingLoop
                 return component.template.StandSlot;
             }
         }
+        private StandSlotFace StandSlotFace
+        {
+            get
+            {
+                return component.template.StandSlotFace;
+            }
+        }
 
         private StandSlotPopup slotPopup;
+        private SingleSlotPopup singlePopup;
 
         private void OnEnable()
         {
             component = (StandSlotShowClip)target;
-            BustAdvConfig bustAdvConfig = BustAdvConfig.LoadSettings();
-            string[] brows = bustAdvConfig.AdvCasheName[StandSlot.id - 1].casheBrow;
-            string[] eyes = bustAdvConfig.AdvCasheName[StandSlot.id - 1].casheEye;
-            string[] mouths = bustAdvConfig.AdvCasheName[StandSlot.id - 1].casheMouth;
-            //string[] brows = StandSlot.casheBrow.Select(a => a.name).ToArray();
-            //string[] eyes = StandSlot.casheEye.Select(a => a.name).ToArray();
-            //string[] mouths = StandSlot.casheMouth.Select(a => a.name).ToArray();
 
-            slotPopup = new StandSlotPopup(brows, eyes, mouths);
+            BustAdvConfig bustAdvConfig = BustAdvConfig.LoadSettings();
+
+            if (StandSlot != null)
+            {
+                string[] brows = bustAdvConfig.AdvCasheName[StandSlot.id - 1].casheBrow;
+                string[] eyes = bustAdvConfig.AdvCasheName[StandSlot.id - 1].casheEye;
+                string[] mouths = bustAdvConfig.AdvCasheName[StandSlot.id - 1].casheMouth;
+
+                slotPopup = new StandSlotPopup(brows, eyes, mouths);
+            }
+            else if (StandSlotFace != null)
+            {
+                string[] mouths = bustAdvConfig.AdvCasheName[StandSlotFace.id - 1].casheMouth;
+                singlePopup = new SingleSlotPopup(mouths, "面部");
+            }
         }
+
+
 
         public override void OnInspectorGUI()
         {
-            if (slotPopup == null)
+            if (slotPopup == null && singlePopup == null)
             {
                 OnEnable();
             }
             base.OnInspectorGUI();
-            int casheOverallIndex = Behaviour.overallIndex;
-            bool dirty =  slotPopup.OnInspectorGUI(ref Behaviour.browIndex, ref Behaviour.eyeIndex, ref Behaviour.mouthIndex, ref Behaviour.overallIndex);
-            if (casheOverallIndex != Behaviour.overallIndex)
+            bool dirty = false;
+            if (slotPopup != null)
             {
-                Behaviour.browIndex = Behaviour.overallIndex;
-                Behaviour.eyeIndex = Behaviour.overallIndex;
-                Behaviour.overallIndex = Behaviour.overallIndex;
+                int casheOverallIndex = Behaviour.overallIndex;
+                dirty = slotPopup.OnInspectorGUI(ref Behaviour.browIndex, ref Behaviour.eyeIndex, ref Behaviour.mouthIndex, ref Behaviour.overallIndex);
+                if (casheOverallIndex != Behaviour.overallIndex)
+                {
+                    Behaviour.browIndex = Behaviour.overallIndex;
+                    Behaviour.eyeIndex = Behaviour.overallIndex;
+                    Behaviour.overallIndex = Behaviour.overallIndex;
+                }
             }
-            if(dirty)
+            else if (singlePopup != null)
+            {
+                dirty = singlePopup.OnInspectorGUI(ref Behaviour.faceIndex);
+            }
+            if (dirty)
             {
                 EditorUtility.SetDirty(this.component);
                 AssetDatabase.SaveAssetIfDirty(this.component);

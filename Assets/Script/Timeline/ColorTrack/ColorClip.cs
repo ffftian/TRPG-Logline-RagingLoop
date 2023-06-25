@@ -9,6 +9,8 @@ namespace MiaoTween
         public ColorBehaviour template;
         public Color color = Color.black;
         public ClipCaps clipCaps => ClipCaps.Blending;
+        public override double duration => 1;
+
         public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)
         {
             var playable = ScriptPlayable<ColorBehaviour>.Create(graph, template);

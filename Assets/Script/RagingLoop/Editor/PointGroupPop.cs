@@ -36,7 +36,8 @@ namespace RagingLoop
             EditorGUILayout.LabelField("选择角色站位");
             for (int i = 0; i < component.standPoints.Length; i++)
             {
-                EditorGUILayout.LabelField(component.standPoints[i].name);
+
+                EditorGUILayout.LabelField(component.GetIndexName(i));
                 int lastOccupy = occupyStandSlot[i];
                 occupyStandSlot[i] = EditorGUILayout.Popup(occupyStandSlot[i], pointChoosePopup);
                 occupyStandSlot[i] = occupyStandSlot[i];
@@ -81,7 +82,7 @@ namespace RagingLoop
             EditorGUILayout.LabelField("选择角色站位");
             for (int i = 0; i < component.standPoints.Length; i++)
             {
-                EditorGUILayout.LabelField(component.standPoints[i].name);
+                EditorGUILayout.LabelField(component.GetIndexName(i));
                 int lastOccupy = occupyStandSlot[i];
                 occupyStandSlot[i] = EditorGUILayout.Popup(occupyStandSlot[i], pointChoosePopup);
                 occupyStandSlot[i] = occupyStandSlot[i];

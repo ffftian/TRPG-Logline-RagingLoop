@@ -17,7 +17,6 @@ abstract public class CommonTextAssetTimelineWindow<TSettings> : OdinEditorWindo
 
     [PropertyOrder(1)]
     public List<CommonTextData> messageList;
-
     protected float MessageCount
     {
         get

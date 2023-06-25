@@ -1,44 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6975533752190218954
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 633a2dec5d736c04f923c46a55ca8a40, type: 3}
-  m_Name: DialogueControlClip
-  m_EditorClassIdentifier: 
-  template:
-    dialogue: "\u305D\u3046\u3044\u3048\u3070\u3001\u6E05\u4E4B\u4ECB\u306E\u66FE\u7956\u7236\u3082\u3053\u306E\u5C4B\u6577\u306B\u4F4F\u3093\u3067\u3044\u305F\u3093\u3060\u308D\u3046\u306A\u3002\n"
-    _speed: 20
---- !u!114 &-4007350101579722507
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f27958cbfbf1dc42abe37dac86ebaec, type: 3}
-  m_Name: Stand Slot Track
-  m_EditorClassIdentifier: 
-  m_Version: 3
-  m_AnimClip: {fileID: 0}
-  m_Locked: 0
-  m_Muted: 0
-  m_CustomPlayableFullTypename: 
-  m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
-  m_Children: []
-  m_Clips: []
-  m_Markers:
-    m_Objects: []
---- !u!114 &-3745753440187025262
+--- !u!114 &-6317237988511055367
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1c9b8422f779b3438a13782220d04c7, type: 3}
-  m_Name: DialogTrans
+  m_Name: Dialog
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -62,14 +24,14 @@ MonoBehaviour:
   - m_Version: 1
     m_Start: 0
     m_ClipIn: 0
-    m_Asset: {fileID: -3705893287013543894}
+    m_Asset: {fileID: 4839716698314844578}
     m_Duration: 3.1000001430511475
     m_TimeScale: 1
-    m_ParentTrack: {fileID: -3745753440187025262}
+    m_ParentTrack: {fileID: -6317237988511055367}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0
-    m_BlendOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -130,47 +92,7 @@ MonoBehaviour:
     m_DisplayName: "\u65C1\u767D(100)(6)"
   m_Markers:
     m_Objects: []
---- !u!114 &-3705893287013543894
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 633a2dec5d736c04f923c46a55ca8a40, type: 3}
-  m_Name: DialogueControlClip
-  m_EditorClassIdentifier: 
-  template:
-    dialogue: "\u7B2C\u4E8C\u306B\u3001\u3053\u308C\u304C\u672C\u5F53\u306E\u8A18\u61B6\u306A\u306E\u304B\u3001\u79C1\u81EA\u8EAB\u306E\u5275\u4F5C\u601D\u8003\u304B\u3089\u751F\u307F\u51FA\u3055\u308C\u305F\u3082\u306E\u306A\u306E\u304B\u5224\u65AD\u3059\u308B\u3053\u3068\u304C\u3067\u304D\u307E\u305B\u3093\u3002\u3059\u3079\u3066\u4F5C\u5BB6\u304C\u66F8\u304D\u4E0B\u308D\u3057\u305F\u7269\u8A9E\u3068\u547C\u3079\u307E\u3059\u3002\u3053\u308C\u306F\u8AAD\u8005\u306B\u3068\u3063\u3066\u554F\u984C\u3067\u306F\u3042\u308A\u307E\u305B\u3093\u3002\n"
-    _speed: 20
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfda56da833e2384a9677cd3c976a436, type: 3}
-  m_Name: "\u65C1\u767D(100)(6)"
-  m_EditorClassIdentifier: 
-  m_Version: 0
-  m_Tracks:
-  - {fileID: -4007350101579722507}
-  - {fileID: 1758660447690227714}
-  - {fileID: 3472745640110837647}
-  - {fileID: -3745753440187025262}
-  - {fileID: 611362589359862535}
-  m_FixedDuration: 0
-  m_EditorSettings:
-    m_Framerate: 60
-    m_ScenePreview: 1
-  m_DurationMode: 0
-  m_MarkerTrack: {fileID: 0}
---- !u!114 &611362589359862535
+--- !u!114 &-3496528551439370534
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,7 +119,7 @@ MonoBehaviour:
     volume: 1
     stereoPan: 0
     spatialBlend: 0
---- !u!114 &1758660447690227714
+--- !u!114 &-3186610120456699986
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -221,14 +143,14 @@ MonoBehaviour:
   - m_Version: 1
     m_Start: 0
     m_ClipIn: 0
-    m_Asset: {fileID: 2217280885118800968}
+    m_Asset: {fileID: -552534549636037525}
     m_Duration: 0.5
     m_TimeScale: 1
-    m_ParentTrack: {fileID: 1758660447690227714}
+    m_ParentTrack: {fileID: -3186610120456699986}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0
-    m_BlendOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -289,7 +211,7 @@ MonoBehaviour:
     m_DisplayName: StandSlotPointGroupClip
   m_Markers:
     m_Objects: []
---- !u!114 &2217280885118800968
+--- !u!114 &-552534549636037525
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -303,7 +225,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     occupyStandSlot: e7030000e7030000e7030000e7030000
---- !u!114 &3472745640110837647
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfda56da833e2384a9677cd3c976a436, type: 3}
+  m_Name: "\u65C1\u767D(100)(6)"
+  m_EditorClassIdentifier: 
+  m_Version: 0
+  m_Tracks:
+  - {fileID: 8915368196439001539}
+  - {fileID: -3186610120456699986}
+  - {fileID: -6317237988511055367}
+  - {fileID: 8810320344026035603}
+  - {fileID: -3496528551439370534}
+  m_FixedDuration: 0
+  m_EditorSettings:
+    m_Framerate: 60
+    m_ScenePreview: 1
+  m_DurationMode: 0
+  m_MarkerTrack: {fileID: 0}
+--- !u!114 &2772489590794178267
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 633a2dec5d736c04f923c46a55ca8a40, type: 3}
+  m_Name: DialogueControlClip
+  m_EditorClassIdentifier: 
+  template:
+    dialogue: "\u8FD9\u4E48\u8BF4\u8D77\u6765\uFF0C\u6E05\u4E4B\u4ECB\u7684\u66FE\u7956\u7236\u66FE\u7ECF\u4E5F\u4F4F\u5728\u8FD9\u5EA7\u522B\u9986\u4E2D\u5427\u3002\n"
+    _speed: 20
+--- !u!114 &4839716698314844578
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 633a2dec5d736c04f923c46a55ca8a40, type: 3}
+  m_Name: DialogueControlClip
+  m_EditorClassIdentifier: 
+  template:
+    dialogue: "\u305D\u3046\u3044\u3048\u3070\u3001\u6E05\u4E4B\u4ECB\u306E\u66FE\u7956\u7236\u3082\u3053\u306E\u5C4B\u6577\u306B\u4F4F\u3093\u3067\u3044\u305F\u3093\u3060\u308D\u3046\u306A\u3002\n"
+    _speed: 20
+--- !u!114 &8810320344026035603
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -313,7 +290,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1c9b8422f779b3438a13782220d04c7, type: 3}
-  m_Name: Dialog
+  m_Name: DialogTrans
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -327,14 +304,14 @@ MonoBehaviour:
   - m_Version: 1
     m_Start: 0
     m_ClipIn: 0
-    m_Asset: {fileID: -6975533752190218954}
+    m_Asset: {fileID: 2772489590794178267}
     m_Duration: 3.1000001430511475
     m_TimeScale: 1
-    m_ParentTrack: {fileID: 3472745640110837647}
+    m_ParentTrack: {fileID: 8810320344026035603}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0
-    m_BlendOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -393,5 +370,28 @@ MonoBehaviour:
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
     m_DisplayName: "\u65C1\u767D(100)(6)"
+  m_Markers:
+    m_Objects: []
+--- !u!114 &8915368196439001539
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f27958cbfbf1dc42abe37dac86ebaec, type: 3}
+  m_Name: Stand Slot Track
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips: []
   m_Markers:
     m_Objects: []

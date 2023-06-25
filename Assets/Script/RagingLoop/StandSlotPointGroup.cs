@@ -11,6 +11,18 @@ namespace RagingLoop
 
     public class StandSlotPointGroup : MonoBehaviour
     {
+        public string GetIndexName(int index)
+        {
+            if (standPoints[index].name=="7")
+            {
+                return standPoints[index].name + "特写";
+            }
+            else
+            {
+                return standPoints[index].name;
+            }    
+        }
+
         /// <summary>
         /// 可绑定立绘的位置
         /// </summary>
