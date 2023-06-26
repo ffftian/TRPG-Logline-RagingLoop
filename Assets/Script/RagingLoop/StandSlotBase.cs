@@ -20,6 +20,8 @@ public class StandSlotBase : MonoBehaviour
     /// 还存在一些，没有命名序号的图片，一并收入
     /// </summary>
     public Image[] other;
+
+    public int index;
     public void ChangeBody(int index)
     {
         body.sprite = casheBody[index];

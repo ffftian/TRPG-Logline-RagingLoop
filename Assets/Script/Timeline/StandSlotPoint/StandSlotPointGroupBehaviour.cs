@@ -15,6 +15,7 @@ namespace RagingLoop
         [HideInInspector]//临时的，设置占用格子
         public int[] occupyStandSlot = new int[7] {999,999,999,999,999,999,999 };
 
+        public int[] slotIndexs = new int[7] { 0, 0, 0, 0, 0, 0, 0 };//每个格子附带的小序号
 
         public override void ProcessFrame(Playable playable, FrameData info, object playerData)
         {
@@ -35,7 +36,7 @@ namespace RagingLoop
                 {
                     if (occupyStandSlot[i] < standSlotPointGroup.standSlotGroup.Length)
                     {
-                        standSlotPointGroup.BindSlot(occupyStandSlot[i], i);
+                        standSlotPointGroup.BindSlot(occupyStandSlot[i], i, slotIndexs[i]);
                     }
                     //else
                     //{
@@ -56,7 +57,7 @@ namespace RagingLoop
 
                     if (occupyStandSlot[i] < standSlotPointGroup.standSlotGroup.Length)
                     {
-                        standSlotPointGroup.BindSlot(occupyStandSlot[i], i);
+                        standSlotPointGroup.BindSlot(occupyStandSlot[i], i, slotIndexs[i]);
                     }
                 }
             }

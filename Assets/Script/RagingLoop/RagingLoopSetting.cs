@@ -91,8 +91,15 @@ public static class RagingLoopSetting
 
     public static void 置入旧有数据()
     {
-        BustAdvConfig bustAdvConfig = BustAdvConfig.LoadSettings();
+        //BustAdvConfig bustAdvConfig = BustAdvConfig.LoadSettings();
 
+        //foreach(var adv in bustAdvConfig.BustAdv)
+        //{
+        //    bustAdvConfig.BustAdvList[adv.Key][0] = adv.Value;
+        //}
+        //UnityEditor.EditorUtility.SetDirty(bustAdvConfig);
+        //AssetDatabase.SaveAssetIfDirty(bustAdvConfig);
+        //Debug.Log("置入位置成功");
     }
 
     private static void InputBustAdv(Dictionary<string, List<ImgBustAdv>> BustAdv, string analysis)
@@ -188,36 +195,38 @@ public static class RagingLoopSetting
     //    }
     //}
 
-
-    public static ImgBustAdv GetBustAdv(int slot, int number)
+    public static List<ImgBustAdv> GetBustAdv(int slot, int number)
     {
 #if UNITY_EDITOR
         BustAdvConfig bustAdvConfig = BustAdvConfig.LoadSettings();
 #else
         BustAdvConfig bustAdvConfig = RagingLoopSettingMono.Instance.bustAdvConfig;
 #endif
-        if (bustAdvConfig.BustAdv.TryGetValue($"{slot}_{number}", out var imgBustAdv))
+        if (bustAdvConfig.BustAdvList.TryGetValue($"{slot}_{number}", out var imgBustAdv))
         {
             return imgBustAdv;
         }
         Debug.LogError($"未识别到的坐标{slot}_{number}");
-        return new ImgBustAdv();
+        return null;
     }
-    public static void SaveBustAdv(int slot, int number, RectTransform rectTransform)
+    public static void SaveBustAdv(int slot, int number,int index, RectTransform rectTransform)
     {
 #if UNITY_EDITOR
         BustAdvConfig bustAdvConfig = BustAdvConfig.LoadSettings();
 #else
         BustAdvConfig bustAdvConfig = RagingLoopSettingMono.Instance.bustAdvConfig;
 #endif
-        if (bustAdvConfig.BustAdv.TryGetValue($"{slot}_{number}", out var imgBustAdv))
+        if (bustAdvConfig.BustAdvList.TryGetValue($"{slot}_{number}", out var imgBustAdvList))
         {
+            ImgBustAdv imgBustAdv = new ImgBustAdv();
             imgBustAdv.xy = rectTransform.anchoredPosition;
             imgBustAdv.s = rectTransform.localScale.x * 100;
             imgBustAdv.anchorMax = rectTransform.anchorMax;
             imgBustAdv.anchorMin = rectTransform.anchorMin;
             imgBustAdv.pivot = rectTransform.pivot;
-            bustAdvConfig.BustAdv[$"{slot}_{number}"] = imgBustAdv;
+            bustAdvConfig.BustAdvList[$"{slot}_{number}"][index] = imgBustAdv;
+
+            //bustAdvConfig.BustAdv[$"{slot}_{number}"] = imgBustAdv;
 
 #if UNITY_EDITOR
             UnityEditor.EditorUtility.SetDirty(bustAdvConfig);
@@ -230,5 +239,47 @@ public static class RagingLoopSetting
             Debug.LogError($"未能覆盖到BustAdv配置中{slot}_{number}");
         }
     }
+
+//    public static ImgBustAdv GetBustAdv(int slot, int number)
+//    {
+//#if UNITY_EDITOR
+//        BustAdvConfig bustAdvConfig = BustAdvConfig.LoadSettings();
+//#else
+//        BustAdvConfig bustAdvConfig = RagingLoopSettingMono.Instance.bustAdvConfig;
+//#endif
+//        if (bustAdvConfig.BustAdv.TryGetValue($"{slot}_{number}", out var imgBustAdv))
+//        {
+//            return imgBustAdv;
+//        }
+//        Debug.LogError($"未识别到的坐标{slot}_{number}");
+//        return new ImgBustAdv();
+//    }
+//    public static void SaveBustAdv(int slot, int number, RectTransform rectTransform)
+//    {
+//#if UNITY_EDITOR
+//        BustAdvConfig bustAdvConfig = BustAdvConfig.LoadSettings();
+//#else
+//        BustAdvConfig bustAdvConfig = RagingLoopSettingMono.Instance.bustAdvConfig;
+//#endif
+//        if (bustAdvConfig.BustAdv.TryGetValue($"{slot}_{number}", out var imgBustAdv))
+//        {
+//            imgBustAdv.xy = rectTransform.anchoredPosition;
+//            imgBustAdv.s = rectTransform.localScale.x * 100;
+//            imgBustAdv.anchorMax = rectTransform.anchorMax;
+//            imgBustAdv.anchorMin = rectTransform.anchorMin;
+//            imgBustAdv.pivot = rectTransform.pivot;
+//            bustAdvConfig.BustAdv[$"{slot}_{number}"] = imgBustAdv;
+
+//#if UNITY_EDITOR
+//            UnityEditor.EditorUtility.SetDirty(bustAdvConfig);
+//            AssetDatabase.SaveAssetIfDirty(bustAdvConfig);
+//            Debug.Log($"成功覆盖到BustAdv配置{slot}_{number}中");
+//#endif
+//        }
+//        else
+//        {
+//            Debug.LogError($"未能覆盖到BustAdv配置中{slot}_{number}");
+//        }
+//    }
 }
 

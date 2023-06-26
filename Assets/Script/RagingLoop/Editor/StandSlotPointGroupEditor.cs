@@ -73,7 +73,7 @@ namespace RagingLoop
             }
 
             if (component.standPoints == null|| pop==null) return;
-            pop.OnInspectorGUI(ref component.occupyStandSlot);
+            pop.OnInspectorGUI(ref component.occupyStandSlot,ref component.slotIndexs);
         }
     }
 }

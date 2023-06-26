@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,10 @@ namespace RagingLoop
             {
                 return standPoints[index].name + "特写";
             }
+            else if (standPoints[index].name == "9")
+            {
+                return standPoints[index].name + "头像";
+            }
             else
             {
                 return standPoints[index].name;
@@ -31,6 +36,7 @@ namespace RagingLoop
         /// 可绑定的立绘
         /// </summary>
         public RectTransform[] standSlotGroup;
+
         /// <summary>
         /// 将拥有指定索引Slot释放
         /// </summary>
@@ -41,7 +47,15 @@ namespace RagingLoop
             standSlot.SetParent(this.transform);
             standSlot.gameObject.SetActive(false);
         }
-        public void BindSlot(int standIndex, int standPointIndex)
+         public List<ImgBustAdv> GetSlotImgBustAdv(int standIndex, int standPointIndex)
+        {
+            RectTransform standPoint = standPoints[standPointIndex];
+            string slot = standPoint.name;
+
+            List<ImgBustAdv> imgBustAdvList = RagingLoopSetting.GetBustAdv(int.Parse(slot), standIndex + 1);
+            return imgBustAdvList;
+        }
+        public void BindSlot(int standIndex, int standPointIndex,int index)
         {
             RectTransform standSlot = standSlotGroup[standIndex];
             RectTransform standPoint = standPoints[standPointIndex];
@@ -50,20 +64,21 @@ namespace RagingLoop
 
             standSlot.SetParent(standPoint, false);
             standSlot.gameObject.SetActive(true);
-            SetHeadPos(standSlot, int.Parse(slot), standIndex +1);
+            SetPos(standSlot, int.Parse(slot), standIndex +1,index);
             //standSlot.anchoredPosition = Vector3.zero;
             //standSlot.localScale = Vector3.one;
 
         }
 
-        public void SetHeadPos(RectTransform standSlotRect,int point,int id)
+        public void SetPos(RectTransform standSlotRect,int point,int id,int index)
         {
-            StandSlotBase standSlotBase = standSlotRect.GetComponent<StandSlotBase>();
+            //StandSlotBase standSlotBase = standSlotRect.GetComponent<StandSlotBase>();
             //float width = standSlotBase.body.mainTexture.width;
             //float height = standSlotBase.body.mainTexture.height;
-            ImgBustAdv imgBustAdv = RagingLoopSetting.GetBustAdv(point, id);
-           
-            if(point == 9)
+            List<ImgBustAdv> imgBustAdvList = RagingLoopSetting.GetBustAdv(point, id);
+            ImgBustAdv imgBustAdv = imgBustAdvList[index];
+
+            if (point == 9)
             {
                 standSlotRect.anchoredPosition = imgBustAdv.xy;
                 if (imgBustAdv.anchorMax != Vector2.zero)
@@ -96,6 +111,8 @@ namespace RagingLoop
         /// </summary>
         [HideInInspector]
         public int[] occupyStandSlot;
+
+        public int[] slotIndexs;
     }
 
 }

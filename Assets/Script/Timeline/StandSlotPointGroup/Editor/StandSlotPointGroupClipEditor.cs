@@ -55,7 +55,7 @@ public class StandSlotPointGroupClipEditor : Editor
         base.OnInspectorGUI();
 
         if (StandSlotPointGroup == null) return;
-        pop.OnInspectorGUINoChange(ref Behaviour.occupyStandSlot);
+        pop.OnInspectorGUINoChange(ref Behaviour.occupyStandSlot,ref Behaviour.slotIndexs);
 
     }
 }

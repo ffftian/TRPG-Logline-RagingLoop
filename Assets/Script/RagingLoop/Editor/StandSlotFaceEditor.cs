@@ -42,11 +42,12 @@ namespace RagingLoop
         }
         public override void OnInspectorGUI()
         {
+
             if (GUILayout.Button("保存当前的Adv半身坐标"))
             {
                 var slot = component.transform.parent;
                 int slotIndex = int.Parse(slot.name);
-                RagingLoopSetting.SaveBustAdv(slotIndex, component.id, component.transform as RectTransform);
+                RagingLoopSetting.SaveBustAdv(slotIndex, component.id, component.index, component.transform as RectTransform);
             }
             base.OnInspectorGUI();
             int casheFace = component.faceIndex;

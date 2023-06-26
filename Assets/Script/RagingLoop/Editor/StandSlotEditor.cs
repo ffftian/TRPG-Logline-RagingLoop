@@ -23,7 +23,7 @@ namespace RagingLoop
             component = (StandSlot)target;
             //string[] body = component.casheBody.Select(c => c.name).ToArray();
             //int length = component.casheBrow.Count;
-            string[] brows = bustAdvConfig.AdvCasheName[component.id-1].casheBrow;
+            string[] brows = bustAdvConfig.AdvCasheName[component.id - 1].casheBrow;
             string[] eyes = bustAdvConfig.AdvCasheName[component.id - 1].casheEye;
             string[] mouths = bustAdvConfig.AdvCasheName[component.id - 1].casheMouth;
 
@@ -46,11 +46,19 @@ namespace RagingLoop
         }
         public override void OnInspectorGUI()
         {
-            if(GUILayout.Button("保存当前的Adv半身坐标"))
+            try
             {
                 var slot = component.transform.parent;
                 int slotIndex = int.Parse(slot.name);
-                RagingLoopSetting.SaveBustAdv(slotIndex, component.id, component.transform as RectTransform);
+                component.index = EditorGUILayout.IntSlider(component.index, 0, component.GetSlotImgBustAdv().Count);
+                if (GUILayout.Button("保存当前的Adv半身坐标(需要在已在编辑时使用)"))
+                {
+                    RagingLoopSetting.SaveBustAdv(slotIndex, component.id, component.index, component.transform as RectTransform);
+                }
+            }
+            catch
+            {
+
             }
 
             base.OnInspectorGUI();
@@ -81,7 +89,7 @@ namespace RagingLoop
 
 
             int id = component.id - 1;
-            bustAdvConfig.AdvCasheName[id].casheBrow[casheBrow]  = EditorGUILayout.TextField("Brow可修改名称", bustAdvConfig.AdvCasheName[id].casheBrow[casheBrow]);
+            bustAdvConfig.AdvCasheName[id].casheBrow[casheBrow] = EditorGUILayout.TextField("Brow可修改名称", bustAdvConfig.AdvCasheName[id].casheBrow[casheBrow]);
             bustAdvConfig.AdvCasheName[id].casheEye[casheEye] = EditorGUILayout.TextField("Eye可修改名称", bustAdvConfig.AdvCasheName[id].casheEye[casheEye]);
             bustAdvConfig.AdvCasheName[id].casheMouth[casheMouth] = EditorGUILayout.TextField("Mouth可修改名称", bustAdvConfig.AdvCasheName[id].casheMouth[casheMouth]);
             //RefreshName(this.component.name, overallIndex);

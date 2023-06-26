@@ -11,7 +11,7 @@ public class BustAdvConfig : BaseOdinSettings<BustAdvConfig>
 {
 
     public Dictionary<string, List<ImgBustAdv>> BustAdvList = new Dictionary<string, List<ImgBustAdv>>();
-    public Dictionary<string, ImgBustAdv> BustAdv = new Dictionary<string, ImgBustAdv>();
+    //public Dictionary<string, ImgBustAdv> BustAdv = new Dictionary<string, ImgBustAdv>();
     public SaveCasheName[] AdvCasheName;
 
 #if UNITY_EDITOR

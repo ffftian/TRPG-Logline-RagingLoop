@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.UI;
 namespace RagingLoop
@@ -26,6 +27,14 @@ namespace RagingLoop
         public void Awake()
         {
             shutEye = new SequentialIntervalSprite(eye, SequentialIntervalSprite.BlinkEye());
+        }
+
+        public List<ImgBustAdv> GetSlotImgBustAdv()
+        {
+            var slot = transform.parent;
+            int slotIndex = int.Parse(slot.name);
+            List<ImgBustAdv> imgBustAdvList = RagingLoopSetting.GetBustAdv(slotIndex,id);
+            return imgBustAdvList;
         }
 
         public void ChangeBrow(int browIndex)

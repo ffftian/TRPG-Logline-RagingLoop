@@ -10,6 +10,9 @@ using UnityEngine;
 
 namespace RagingLoop
 {
+    /// <summary>
+    /// Editor
+    /// </summary>
     public class PointGroupPop
     {
         private StandSlotPointGroup component;
@@ -28,10 +31,10 @@ namespace RagingLoop
             pointChoosePopup[component.standSlotGroup.Length] = "null";
         }
         /// <summary>
-        /// 
+        /// 会进行更改重绑定的设置
         /// </summary>
         /// <param name="cashePoint=已在使用中的点上的对象"></param>
-         public void OnInspectorGUI(ref int[] occupyStandSlot)
+         public void OnInspectorGUI(ref int[] occupyStandSlot,ref int[] slotIndexs)
         {
             EditorGUILayout.LabelField("选择角色站位");
             for (int i = 0; i < component.standPoints.Length; i++)
@@ -40,7 +43,8 @@ namespace RagingLoop
                 EditorGUILayout.LabelField(component.GetIndexName(i));
                 int lastOccupy = occupyStandSlot[i];
                 occupyStandSlot[i] = EditorGUILayout.Popup(occupyStandSlot[i], pointChoosePopup);
-                occupyStandSlot[i] = occupyStandSlot[i];
+                
+                //occupyStandSlot[i] = occupyStandSlot[i];
 
                 if (occupyStandSlot[i] != lastOccupy)
                 {
@@ -60,7 +64,8 @@ namespace RagingLoop
                         {
                             component.FreeSlot(lastOccupy);
                         }
-                        component.BindSlot(occupyStandSlot[i], i);
+                        slotIndexs[i] = EditorGUILayout.IntSlider(slotIndexs[i], 0, component.GetSlotImgBustAdv(occupyStandSlot[i], i).Count - 1);
+                        component.BindSlot(occupyStandSlot[i], i, slotIndexs[i]);
                     }
                     ////Transform slot = component.standSlotGroup[occupyStandSlot[i]];
                     //component.FreeSlot(slotIndex);
@@ -76,8 +81,11 @@ namespace RagingLoop
                 }
             }
         }
-
-        public void OnInspectorGUINoChange(ref int[] occupyStandSlot)
+        /// <summary>
+        /// 不进行更改，只更改数据
+        /// </summary>
+        /// <param name="occupyStandSlot"></param>
+        public void OnInspectorGUINoChange(ref int[] occupyStandSlot, ref int[] slotIndexs)
         {
             EditorGUILayout.LabelField("选择角色站位");
             for (int i = 0; i < component.standPoints.Length; i++)
@@ -107,6 +115,10 @@ namespace RagingLoop
                     //    }
                     //    component.BindSlot(occupyStandSlot[i], i);
                     //}
+                }
+                if (occupyStandSlot[i] < component.standSlotGroup.Length)//不等于空目标即可调整
+                {
+                    slotIndexs[i] = EditorGUILayout.IntSlider(slotIndexs[i], 0, component.GetSlotImgBustAdv(occupyStandSlot[i], i).Count - 1);
                 }
                 if (GUILayout.Button("清空"))
                 {
