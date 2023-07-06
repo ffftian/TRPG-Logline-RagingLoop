@@ -13,8 +13,9 @@ namespace RagingLoop
     {
         public string saveDirectory;
         public string DialogueDirectiory;
+        public bool autoSetCharacter;
 
-        public RagingLoopTimelineCreater(string saveTimelineDirectory, string DialogueDirectiory = @"Assets\AssetSpeak")
+        public RagingLoopTimelineCreater(bool autoSetCharacter,string saveTimelineDirectory, string DialogueDirectiory = @"Assets\AssetSpeak")
         {
             this.saveDirectory = saveTimelineDirectory;
             this.DialogueDirectiory = DialogueDirectiory;
@@ -22,6 +23,7 @@ namespace RagingLoop
             {
                 Directory.CreateDirectory(saveTimelineDirectory);
             }
+            this.autoSetCharacter = autoSetCharacter;
         }
         public TimelineAsset CreateMessageTimeLine(string timelineName, string dialogue,string translateDialogue, string SpeakAssetName)
         {
@@ -35,11 +37,19 @@ namespace RagingLoop
 
             ////轨道资源创建
             StandSlotTrack standSlotTrack = timelineAsset.CreateTrack<StandSlotTrack>();
-
+            if(autoSetCharacter)
+            {
+                standSlotTrack.CreateClip<StandSlotShowClip>();
+            }
             if (SpeakAssetName != "旁白")
             {
                 StandSlotPointGroupTrack standSlotPointGroup = timelineAsset.CreateTrack<StandSlotPointGroupTrack>();
-                standSlotPointGroup.CreateClip<StandSlotPointGroupClip>();
+                StandSlotPointGroupClip standSlotPointGroupClip = standSlotPointGroup.CreateClip<StandSlotPointGroupClip>().asset as StandSlotPointGroupClip;
+                if(autoSetCharacter)
+                {
+                    string id = timelineName.Split(new char[] { '(', ')' })[1];
+                    standSlotPointGroupClip.template.occupyStandSlot[4] = int.Parse(id)-1;
+                }
             }
             DialogueControlTrack dialogueControlTrack = timelineAsset.CreateTrack<DialogueControlTrack>("Dialog");
             DialogueControlTrack translateDialogueControlTrack = timelineAsset.CreateTrack<DialogueControlTrack>("DialogTrans");

@@ -8,6 +8,7 @@ using UnityEngine;
 public class BilingualTextSettings : CommonTextSettings
 {
     public CommonTextAsset SecondTextAsset;
+    public bool 启用预设置头像;
 }
 
 

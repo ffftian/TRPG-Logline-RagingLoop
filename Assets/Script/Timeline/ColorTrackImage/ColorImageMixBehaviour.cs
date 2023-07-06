@@ -16,6 +16,7 @@ namespace MiaoTween
             if (component == null)
             {
                 component = playerData as Graphic;
+                if (component == null) return;
                 baseColor = component.color;
             }
             int inputCount = playable.GetInputCount();

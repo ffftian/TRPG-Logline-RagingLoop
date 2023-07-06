@@ -17,6 +17,7 @@ namespace RagingLoop
         public CommonTextAsset messageAssetCN;
         protected List<CommonTextData> messageListCN;
 
+        public bool 启用预设置头像;
         public override void RefreshMessageAssetPath()
         {
             base.RefreshMessageAssetPath();
@@ -32,7 +33,7 @@ namespace RagingLoop
 
         protected override void CreateTimeline(string timeLinePath)
         {
-            RagingLoopTimelineCreater timelineCreater = new RagingLoopTimelineCreater(timeLinePath);
+            RagingLoopTimelineCreater timelineCreater = new RagingLoopTimelineCreater(启用预设置头像,timeLinePath);
             for (int i = 0; i < messageList.Count; i++)
             {
                 timelineCreater.CreateMessageTimeLine(messageList[i].SaveID, messageList[i].log, messageListCN[i].log, $@"{messageList[i].name}\{messageList[i].SaveID}");
@@ -51,11 +52,13 @@ namespace RagingLoop
         {
             base.InitAsset();
             messageAssetCN = settings.SecondTextAsset;
+            启用预设置头像 = settings.启用预设置头像;
         }
 
         protected override void OnDisable()
         {
             settings.SecondTextAsset = messageAssetCN;
+            settings.启用预设置头像 = 启用预设置头像;
             base.OnDisable();
         }
 

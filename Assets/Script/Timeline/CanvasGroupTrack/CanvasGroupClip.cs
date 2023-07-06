@@ -10,6 +10,8 @@ namespace MiaoTween
         public float alpha = 1;
 
         public ClipCaps clipCaps => ClipCaps.Blending;
+
+        public override double duration => 1;
         public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)
         {
             var playable = ScriptPlayable<CanvasGroupBehaviour>.Create(graph, template);

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,12 +40,88 @@ namespace RagingLoop
                 DrawExtra();
         }
 
+
+        private StandSlotPointGroupClip GetStandSlotPointGroupClip(TimelineAsset timelineAsset)
+        {
+            foreach (TrackAsset asset in timelineAsset.GetRootTracks())
+            {
+                if (asset is StandSlotPointGroupTrack)
+                {
+                    foreach (TimelineClip timelineClip in asset.GetClips())
+                    {
+                        StandSlotPointGroupClip standSlotPointGroupClip = timelineClip.asset as StandSlotPointGroupClip;
+                        return standSlotPointGroupClip;
+                    }
+                }
+            }
+            return null;
+        }
+
+        private StandSlotShowClip GetStandSlotShowClip(TimelineAsset timelineAsset)
+        {
+            foreach (TrackAsset asset in timelineAsset.GetRootTracks())
+            {
+                if (asset is StandSlotTrack)
+                {
+                    foreach (TimelineClip timelineClip in asset.GetClips())
+                    {
+                        StandSlotShowClip standSlotPointGroupClip = timelineClip.asset as StandSlotShowClip;
+                        return standSlotPointGroupClip;
+                    }
+                }
+            }
+            return null;
+        }
+
         public void DrawExtra()
         {
+            CommonTextData serialData = component.messageAsset.messageDataList[serialPtr - 1];
+            string timeLinePath = $@"{QQLogSettings.TimeLineDirectory}\{component.messageAsset.name}\{serialData.SaveID}";
+            var LastTimeLineAsset = Resources.Load<TimelineAsset>(timeLinePath);
+
             if (component.messageAssetLength != null)
-            {
-                #region 文本部分
-                int length = (int)component.messageAssetLength;
+{
+                if (GUILayout.Button("沿用角色站位"))
+                {
+                    StandSlotPointGroupClip lastStandSlotPointGroupClip = GetStandSlotPointGroupClip(LastTimeLineAsset);
+                    StandSlotPointGroupClip standSlotPointGroupClip = GetStandSlotPointGroupClip(component.useTimeLineAsset);
+
+                    for (int i = 0; i < lastStandSlotPointGroupClip.template.occupyStandSlot.Length; i++)
+                    {
+                        standSlotPointGroupClip.template.occupyStandSlot[i] = lastStandSlotPointGroupClip.template.occupyStandSlot[i];
+                    }
+                    for (int i = 0; i < lastStandSlotPointGroupClip.template.slotIndexs.Length; i++)
+                    {
+                        standSlotPointGroupClip.template.slotIndexs[i] = lastStandSlotPointGroupClip.template.slotIndexs[i];
+                    }
+                    for (int i = 0; i < standSlotPointGroupClip.template.standSlotPointGroup.occupyStandSlot.Length; i++)
+                    {
+                        if (standSlotPointGroupClip.template.occupyStandSlot[i] < standSlotPointGroupClip.template.standSlotPointGroup.standSlotGroup.Length)
+                        {
+                            standSlotPointGroupClip.template.standSlotPointGroup.BindSlot(standSlotPointGroupClip.template.occupyStandSlot[i], i, standSlotPointGroupClip.template.slotIndexs[i]);
+                        }
+                    }
+                    StandSlotShowClip lastStandClip = GetStandSlotShowClip(LastTimeLineAsset);
+                    StandSlotShowClip standClip = GetStandSlotShowClip(component.useTimeLineAsset);
+
+                    if (standClip.template.StandSlotFace != null)
+                    {
+                        standClip.template.faceIndex = lastStandClip.template.faceIndex;
+                        standClip.template.StandSlotFace.ChangeFace(standClip.template.faceIndex);
+                    }
+                    if (standClip.template.StandSlot != null)
+                    {
+                        standClip.template.browIndex = lastStandClip.template.browIndex;
+                        standClip.template.eyeIndex = lastStandClip.template.eyeIndex;
+                        standClip.template.mouthIndex = lastStandClip.template.mouthIndex;
+                        standClip.template.StandSlot.ChangeBrow(standClip.template.browIndex);
+                        standClip.template.StandSlot.ChangeEye(standClip.template.eyeIndex);
+                        standClip.template.StandSlot.ChangeMouth(standClip.template.mouthIndex);
+                    }
+
+                }
+                    #region 文本部分
+                    int length = (int)component.messageAssetLength;
 
                 serialPtr = (int)EditorGUILayout.Slider("文本条", serialPtr, 0, length - 1);
                 EditorGUILayout.BeginHorizontal();

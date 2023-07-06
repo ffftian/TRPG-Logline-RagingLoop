@@ -92,20 +92,6 @@ MonoBehaviour:
     m_DisplayName: StandSlotShowClip
   m_Markers:
     m_Objects: []
---- !u!114 &-6898011941223089277
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14600e081464e954c87ff6641ba6602b, type: 3}
-  m_Name: StandSlotPointGroupClip
-  m_EditorClassIdentifier: 
-  template:
-    occupyStandSlot: e70300001900000010000000e7030000
 --- !u!114 &-4357308158151120004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,7 +116,7 @@ MonoBehaviour:
   - m_Version: 1
     m_Start: 0
     m_ClipIn: 0
-    m_Asset: {fileID: -6898011941223089277}
+    m_Asset: {fileID: 8752820666041255390}
     m_Duration: 0.5
     m_TimeScale: 1
     m_ParentTrack: {fileID: -4357308158151120004}
@@ -235,7 +221,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0.5
+    m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 9041759614811485873}
     m_Duration: 6.485328674316406
@@ -331,10 +317,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0.5
+    m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 8442618047112616705}
-    m_Duration: 6.485328674316406
+    m_Duration: 6.7
     m_TimeScale: 1
     m_ParentTrack: {fileID: -1174540161541630347}
     m_EaseInDuration: 0
@@ -448,7 +434,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0.5
+    m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -3770214050724910051}
     m_Duration: 6.485328674316406
@@ -532,7 +518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     position: {x: 0, y: 0, z: 0}
-    faceIndex: 3
+    faceIndex: 0
     overallIndex: 0
     browIndex: 0
     eyeIndex: 0
@@ -552,6 +538,21 @@ MonoBehaviour:
   template:
     dialogue: "\u300C\u307E\u3042\u3001\u50D5\u305F\u3061\u306F\u6BBA\u4EBA\u72AF\u3058\u3083\u306A\u3044\u3057\u3001\u6751\u4EBA\u3082\u305D\u3046\u3058\u3083\u306A\u3044\u3067\u3057\u3087\u300D\n"
     _speed: 20
+--- !u!114 &8752820666041255390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14600e081464e954c87ff6641ba6602b, type: 3}
+  m_Name: StandSlotPointGroupClip
+  m_EditorClassIdentifier: 
+  template:
+    occupyStandSlot: e70300000f000000e70300001000000019000000e7030000e7030000
+    slotIndexs: 00000000000000000000000000000000000000000000000000000000
 --- !u!114 &9041759614811485873
 MonoBehaviour:
   m_ObjectHideFlags: 1

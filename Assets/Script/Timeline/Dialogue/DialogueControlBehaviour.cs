@@ -10,7 +10,7 @@ using UnityEngine.Playables;
 public class DialogueControlBehaviour : PlayableBehaviour
 {
     [SerializeField][TextArea(10,100)] public string dialogue = "对话内容";
-    [SerializeField][Range(3f, 100f)] public double _speed = 10f;
+    [SerializeField][Range(3f, 100f)] public double _speed = 20f;
     private TyperDialogue component;
 
     public int TextLength
